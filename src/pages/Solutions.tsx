@@ -1,14 +1,30 @@
 import { Layout } from '../components/Layout';
+import { GradeBadge } from '../components/GradeBadge';
+import { AIUsageBar } from '../components/MetricCard';
 import { Link } from 'react-router-dom';
-import { TrendingUp, Target, Users, Lightbulb, BarChart3, Code2, GitBranch, Award, Zap, Shield } from 'lucide-react';
+import {
+  TrendingUp,
+  Target,
+  Users,
+  Lightbulb,
+  BarChart3,
+  GitBranch,
+  Zap,
+  Shield,
+  MessageSquare,
+  Bot,
+  Sparkles,
+  FileText,
+  ArrowRight
+} from 'lucide-react';
 
 export const Solutions = () => {
   return (
     <Layout
       seo={{
-        title: 'Solutions - idweo | Engineering Intelligence for Every Role',
-        description: 'Tailored engineering intelligence solutions for CEOs, CTOs, Engineering Managers, and Developers. Get insights that matter to your role.',
-        keywords: ['engineering solutions', 'team analytics', 'development metrics', 'CEO dashboard', 'CTO analytics', 'developer insights'],
+        title: 'Solutions - idweo | AI Engineering Intelligence for Every Role',
+        description: 'AI-powered engineering intelligence solutions for CEOs, CTOs, Engineering Managers, Product Owners, and Developers. Get insights that matter to your role.',
+        keywords: ['AI engineering solutions', 'developer analytics', 'AI code detection', 'story point estimation', 'CEO dashboard', 'CTO analytics'],
       }}
     >
       {/* Hero Section */}
@@ -19,19 +35,19 @@ export const Solutions = () => {
             backgroundSize: '40px 40px'
           }} />
         </div>
-        
+
         <div className="relative container mx-auto px-6 text-center">
           <div className="inline-block bg-accent/10 backdrop-blur-sm px-4 py-2 rounded-full mb-6">
-            <span className="text-accent font-semibold">Solutions by Role</span>
+            <span className="text-accent font-semibold">AI-Powered Solutions by Role</span>
           </div>
-          
+
           <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
-            The Right Insights<br />
+            The Right AI Insights<br />
             <span className="text-accent">For Every Role</span>
           </h1>
-          
+
           <p className="text-xl text-gray-200 max-w-3xl mx-auto mb-10 leading-relaxed">
-            From boardroom to code editor, idweo delivers tailored intelligence 
+            From boardroom to code editor, idweo delivers AI-powered intelligence
             that empowers every role in your engineering organization.
           </p>
         </div>
@@ -41,7 +57,7 @@ export const Solutions = () => {
       <section className="py-20 bg-white">
         <div className="container mx-auto px-6">
           <div className="max-w-6xl mx-auto space-y-20">
-            
+
             {/* CEO / Business Unit Solution */}
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
               <div>
@@ -51,46 +67,44 @@ export const Solutions = () => {
                   </div>
                   <h2 className="text-3xl font-bold text-primary">For CEOs & Business Units</h2>
                 </div>
-                
+
                 <p className="text-xl text-gray-700 mb-8 leading-relaxed">
-                  Get C-suite clarity on tech investments. Understand ROI, track strategic initiatives, 
-                  and make confident decisions about engineering resource allocation.
+                  Get executive clarity on AI tool investments and team performance.
+                  Ask questions in natural language and get instant answers about your engineering organization.
                 </p>
 
                 <div className="space-y-4 mb-8">
                   <div className="flex items-start space-x-3">
-                    <BarChart3 className="w-5 h-5 text-accent mt-1 flex-shrink-0" />
+                    <MessageSquare className="w-5 h-5 text-accent mt-1 flex-shrink-0" />
                     <div>
-                      <h3 className="font-semibold text-primary mb-1">ROI Tracking</h3>
-                      <p className="text-gray-700">Measure engineering investments against business outcomes</p>
+                      <h3 className="font-semibold text-primary mb-1">AI Chat for Quick Queries</h3>
+                      <p className="text-gray-700">Ask "What's our team velocity this quarter?" and get instant answers</p>
                     </div>
                   </div>
-                  
+
                   <div className="flex items-start space-x-3">
-                    <Target className="w-5 h-5 text-accent mt-1 flex-shrink-0" />
+                    <Bot className="w-5 h-5 text-accent mt-1 flex-shrink-0" />
                     <div>
-                      <h3 className="font-semibold text-primary mb-1">Strategic Alignment</h3>
-                      <p className="text-gray-700">Ensure engineering efforts align with business priorities</p>
+                      <h3 className="font-semibold text-primary mb-1">AI Usage Cost Tracking</h3>
+                      <p className="text-gray-700">Understand Copilot/Cursor adoption and ROI across teams</p>
                     </div>
                   </div>
-                  
+
                   <div className="flex items-start space-x-3">
-                    <TrendingUp className="w-5 h-5 text-accent mt-1 flex-shrink-0" />
+                    <FileText className="w-5 h-5 text-accent mt-1 flex-shrink-0" />
                     <div>
-                      <h3 className="font-semibold text-primary mb-1">Project Health</h3>
-                      <p className="text-gray-700">Monitor delivery timelines and resource utilization</p>
+                      <h3 className="font-semibold text-primary mb-1">AI-Generated Executive Summaries</h3>
+                      <p className="text-gray-700">Automatic reports on team performance and project health</p>
                     </div>
                   </div>
                 </div>
 
-                <Link 
+                <Link
                   to="/get-started"
                   className="inline-flex items-center space-x-2 bg-accent text-white px-6 py-3 rounded-lg font-semibold hover:bg-opacity-90 transition-all duration-300"
                 >
                   <span>Get Started</span>
-                  <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-                  </svg>
+                  <ArrowRight className="w-4 h-4" />
                 </Link>
               </div>
 
@@ -103,16 +117,16 @@ export const Solutions = () => {
                     </div>
                     <div className="space-y-3">
                       <div className="flex justify-between items-center">
-                        <span className="text-sm text-gray-600">Engineering ROI</span>
-                        <span className="text-accent font-bold">+24%</span>
+                        <span className="text-sm text-gray-600">ROI from AI Tools</span>
+                        <span className="text-accent font-bold">340%</span>
                       </div>
                       <div className="flex justify-between items-center">
-                        <span className="text-sm text-gray-600">Project Completion</span>
-                        <span className="text-accent font-bold">89%</span>
+                        <span className="text-sm text-gray-600">AI Usage Across Team</span>
+                        <span className="text-accent font-bold">45%</span>
                       </div>
                       <div className="flex justify-between items-center">
-                        <span className="text-sm text-gray-600">Team Efficiency</span>
-                        <span className="text-accent font-bold">↑ 18%</span>
+                        <span className="text-sm text-gray-600">Projects On Track</span>
+                        <span className="text-accent font-bold">12/14</span>
                       </div>
                     </div>
                   </div>
@@ -126,21 +140,20 @@ export const Solutions = () => {
                 <div className="bg-gradient-to-br from-secondary/10 to-primary/10 rounded-2xl p-8 border border-gray-200">
                   <div className="bg-white rounded-lg p-6 shadow-lg">
                     <div className="flex items-center justify-between mb-4">
-                      <h4 className="font-bold text-primary">Technical Metrics</h4>
+                      <h4 className="font-bold text-primary">Team Analytics</h4>
                       <span className="text-xs text-gray-500">Live</span>
                     </div>
-                    <div className="space-y-3">
+                    <div className="space-y-4">
+                      <div className="flex justify-between items-center">
+                        <span className="text-sm text-gray-600">Avg Developer Grade</span>
+                        <GradeBadge grade="B+" size="sm" />
+                      </div>
+                      <div>
+                        <AIUsageBar percentage={35} label="AI Code Detection" />
+                      </div>
                       <div className="flex justify-between items-center">
                         <span className="text-sm text-gray-600">Deployment Frequency</span>
                         <span className="text-secondary font-bold">12/day</span>
-                      </div>
-                      <div className="flex justify-between items-center">
-                        <span className="text-sm text-gray-600">Lead Time</span>
-                        <span className="text-secondary font-bold">2.3h</span>
-                      </div>
-                      <div className="flex justify-between items-center">
-                        <span className="text-sm text-gray-600">Change Failure Rate</span>
-                        <span className="text-accent font-bold">3.2%</span>
                       </div>
                     </div>
                   </div>
@@ -150,50 +163,48 @@ export const Solutions = () => {
               <div className="order-1 lg:order-2">
                 <div className="inline-flex items-center space-x-3 mb-6">
                   <div className="w-12 h-12 bg-secondary/10 rounded-lg flex items-center justify-center">
-                    <Code2 className="w-6 h-6 text-secondary" />
+                    <BarChart3 className="w-6 h-6 text-secondary" />
                   </div>
                   <h2 className="text-3xl font-bold text-primary">For CTOs & Engineering Managers</h2>
                 </div>
-                
+
                 <p className="text-xl text-gray-700 mb-8 leading-relaxed">
-                  Optimize your engineering processes with deep technical insights. Identify bottlenecks, 
-                  reduce technical debt, and improve team velocity with data-backed decisions.
+                  Deep analytics on developer performance and AI tool adoption.
+                  Track grades, detect AI-assisted code, and identify growth opportunities.
                 </p>
 
                 <div className="space-y-4 mb-8">
                   <div className="flex items-start space-x-3">
                     <Target className="w-5 h-5 text-secondary mt-1 flex-shrink-0" />
                     <div>
-                      <h3 className="font-semibold text-primary mb-1">Bottleneck Detection</h3>
-                      <p className="text-gray-700">Identify and resolve workflow impediments instantly</p>
+                      <h3 className="font-semibold text-primary mb-1">Developer Performance Grades (A-F)</h3>
+                      <p className="text-gray-700">Automatic grading based on commit quality, complexity, and impact</p>
                     </div>
                   </div>
-                  
+
                   <div className="flex items-start space-x-3">
-                    <Code2 className="w-5 h-5 text-secondary mt-1 flex-shrink-0" />
+                    <Bot className="w-5 h-5 text-secondary mt-1 flex-shrink-0" />
                     <div>
-                      <h3 className="font-semibold text-primary mb-1">Technical Debt Management</h3>
-                      <p className="text-gray-700">Quantify and prioritize refactoring efforts</p>
+                      <h3 className="font-semibold text-primary mb-1">AI Code Detection with Confidence Scores</h3>
+                      <p className="text-gray-700">Identify Copilot/Cursor usage in commits with detailed analysis</p>
                     </div>
                   </div>
-                  
+
                   <div className="flex items-start space-x-3">
-                    <Users className="w-5 h-5 text-secondary mt-1 flex-shrink-0" />
+                    <TrendingUp className="w-5 h-5 text-secondary mt-1 flex-shrink-0" />
                     <div>
-                      <h3 className="font-semibold text-primary mb-1">Team Velocity Optimization</h3>
-                      <p className="text-gray-700">Balance workload and maximize throughput</p>
+                      <h3 className="font-semibold text-primary mb-1">Monthly Trend Analysis</h3>
+                      <p className="text-gray-700">Track performance trends, commit velocity, and team health</p>
                     </div>
                   </div>
                 </div>
 
-                <Link 
+                <Link
                   to="/get-started"
                   className="inline-flex items-center space-x-2 bg-secondary text-white px-6 py-3 rounded-lg font-semibold hover:bg-opacity-90 transition-all duration-300"
                 >
                   <span>Get Started</span>
-                  <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-                  </svg>
+                  <ArrowRight className="w-4 h-4" />
                 </Link>
               </div>
             </div>
@@ -203,50 +214,48 @@ export const Solutions = () => {
               <div>
                 <div className="inline-flex items-center space-x-3 mb-6">
                   <div className="w-12 h-12 bg-accent/10 rounded-lg flex items-center justify-center">
-                    <BarChart3 className="w-6 h-6 text-accent" />
+                    <Sparkles className="w-6 h-6 text-accent" />
                   </div>
                   <h2 className="text-3xl font-bold text-primary">For Product Owners</h2>
                 </div>
-                
+
                 <p className="text-xl text-gray-700 mb-8 leading-relaxed">
-                  Predict delivery dates with confidence. Align your roadmap with actual engineering 
-                  capacity and make realistic commitments to stakeholders.
+                  AI-powered story point estimation and sprint planning.
+                  Let Magic Estimates analyze your tickets and suggest accurate estimates.
                 </p>
 
                 <div className="space-y-4 mb-8">
                   <div className="flex items-start space-x-3">
+                    <Sparkles className="w-5 h-5 text-accent mt-1 flex-shrink-0" />
+                    <div>
+                      <h3 className="font-semibold text-primary mb-1">Magic Estimates for Sprint Planning</h3>
+                      <p className="text-gray-700">AI suggests story points based on ticket complexity and history</p>
+                    </div>
+                  </div>
+
+                  <div className="flex items-start space-x-3">
                     <Target className="w-5 h-5 text-accent mt-1 flex-shrink-0" />
                     <div>
-                      <h3 className="font-semibold text-primary mb-1">Predictive Forecasting</h3>
-                      <p className="text-gray-700">Accurate delivery predictions based on historical data</p>
+                      <h3 className="font-semibold text-primary mb-1">Ticket Quality Scoring (1-10)</h3>
+                      <p className="text-gray-700">Get quality scores and improvement suggestions for better tickets</p>
                     </div>
                   </div>
-                  
+
                   <div className="flex items-start space-x-3">
-                    <BarChart3 className="w-5 h-5 text-accent mt-1 flex-shrink-0" />
+                    <Users className="w-5 h-5 text-accent mt-1 flex-shrink-0" />
                     <div>
-                      <h3 className="font-semibold text-primary mb-1">Feature Velocity Tracking</h3>
-                      <p className="text-gray-700">Monitor feature development speed and impact</p>
-                    </div>
-                  </div>
-                  
-                  <div className="flex items-start space-x-3">
-                    <TrendingUp className="w-5 h-5 text-accent mt-1 flex-shrink-0" />
-                    <div>
-                      <h3 className="font-semibold text-primary mb-1">Capacity Planning</h3>
-                      <p className="text-gray-700">Plan roadmaps based on real engineering bandwidth</p>
+                      <h3 className="font-semibold text-primary mb-1">Sprint Capacity Planning</h3>
+                      <p className="text-gray-700">Plan sprints based on real developer capacity and velocity</p>
                     </div>
                   </div>
                 </div>
 
-                <Link 
+                <Link
                   to="/get-started"
                   className="inline-flex items-center space-x-2 bg-accent text-white px-6 py-3 rounded-lg font-semibold hover:bg-opacity-90 transition-all duration-300"
                 >
                   <span>Get Started</span>
-                  <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-                  </svg>
+                  <ArrowRight className="w-4 h-4" />
                 </Link>
               </div>
 
@@ -254,21 +263,21 @@ export const Solutions = () => {
                 <div className="bg-gradient-to-br from-accent/10 to-secondary/10 rounded-2xl p-8 border border-gray-200">
                   <div className="bg-white rounded-lg p-6 shadow-lg">
                     <div className="flex items-center justify-between mb-4">
-                      <h4 className="font-bold text-primary">Roadmap Forecast</h4>
-                      <span className="text-xs text-gray-500">Updated</span>
+                      <h4 className="font-bold text-primary">Magic Estimates</h4>
+                      <span className="text-xs text-gray-500">AI-Powered</span>
                     </div>
                     <div className="space-y-3">
                       <div className="flex justify-between items-center">
-                        <span className="text-sm text-gray-600">Q1 Delivery Confidence</span>
-                        <span className="text-accent font-bold">92%</span>
+                        <span className="text-sm text-gray-600">Estimate Accuracy</span>
+                        <span className="text-accent font-bold">94%</span>
                       </div>
                       <div className="flex justify-between items-center">
-                        <span className="text-sm text-gray-600">Average Velocity</span>
-                        <span className="text-accent font-bold">34 pts</span>
+                        <span className="text-sm text-gray-600">Avg Ticket Quality</span>
+                        <span className="text-accent font-bold">7.2/10</span>
                       </div>
                       <div className="flex justify-between items-center">
-                        <span className="text-sm text-gray-600">Feature Completion</span>
-                        <span className="text-accent font-bold">87%</span>
+                        <span className="text-sm text-gray-600">Sprint Completion</span>
+                        <span className="text-accent font-bold">91%</span>
                       </div>
                     </div>
                   </div>
@@ -282,21 +291,20 @@ export const Solutions = () => {
                 <div className="bg-gradient-to-br from-secondary/10 to-primary/10 rounded-2xl p-8 border border-gray-200">
                   <div className="bg-white rounded-lg p-6 shadow-lg">
                     <div className="flex items-center justify-between mb-4">
-                      <h4 className="font-bold text-primary">Growth Tracker</h4>
+                      <h4 className="font-bold text-primary">Personal Analytics</h4>
                       <span className="text-xs text-gray-500">Private</span>
                     </div>
-                    <div className="space-y-3">
+                    <div className="space-y-4">
                       <div className="flex justify-between items-center">
-                        <span className="text-sm text-gray-600">Code Quality Score</span>
-                        <span className="text-secondary font-bold">A+</span>
+                        <span className="text-sm text-gray-600">Your Grade</span>
+                        <GradeBadge grade="A-" size="sm" />
                       </div>
-                      <div className="flex justify-between items-center">
-                        <span className="text-sm text-gray-600">Review Turnaround</span>
-                        <span className="text-secondary font-bold">4.2h</span>
+                      <div>
+                        <AIUsageBar percentage={28} label="Your AI Usage" />
                       </div>
                       <div className="flex justify-between items-center">
                         <span className="text-sm text-gray-600">Skills Gained</span>
-                        <span className="text-accent font-bold">+3</span>
+                        <span className="text-secondary font-bold">+3 this month</span>
                       </div>
                     </div>
                   </div>
@@ -310,46 +318,44 @@ export const Solutions = () => {
                   </div>
                   <h2 className="text-3xl font-bold text-primary">For Developers</h2>
                 </div>
-                
+
                 <p className="text-xl text-gray-700 mb-8 leading-relaxed">
-                  Your personal growth companion. Private insights that help you level up your skills, 
-                  celebrate wins, and understand your impact on the team.
+                  Your personal AI-powered growth companion. Private insights that help you
+                  track your progress, understand your AI tool usage, and level up your skills.
                 </p>
 
                 <div className="space-y-4 mb-8">
                   <div className="flex items-start space-x-3">
-                    <Lightbulb className="w-5 h-5 text-secondary mt-1 flex-shrink-0" />
+                    <BarChart3 className="w-5 h-5 text-secondary mt-1 flex-shrink-0" />
                     <div>
-                      <h3 className="font-semibold text-primary mb-1">Private Growth Insights</h3>
-                      <p className="text-gray-700">Track your development journey privately and securely</p>
+                      <h3 className="font-semibold text-primary mb-1">Private Performance Grades & Trends</h3>
+                      <p className="text-gray-700">Track your commit quality and monthly progress privately</p>
                     </div>
                   </div>
-                  
+
                   <div className="flex items-start space-x-3">
-                    <Award className="w-5 h-5 text-secondary mt-1 flex-shrink-0" />
+                    <Bot className="w-5 h-5 text-secondary mt-1 flex-shrink-0" />
                     <div>
-                      <h3 className="font-semibold text-primary mb-1">Impact Visualization</h3>
-                      <p className="text-gray-700">See the real impact of your contributions</p>
+                      <h3 className="font-semibold text-primary mb-1">Personal AI Usage Tracking</h3>
+                      <p className="text-gray-700">Understand how much Copilot/Cursor influences your work</p>
                     </div>
                   </div>
-                  
+
                   <div className="flex items-start space-x-3">
-                    <Target className="w-5 h-5 text-secondary mt-1 flex-shrink-0" />
+                    <FileText className="w-5 h-5 text-secondary mt-1 flex-shrink-0" />
                     <div>
-                      <h3 className="font-semibold text-primary mb-1">Skill Recommendations</h3>
-                      <p className="text-gray-700">Get personalized suggestions for leveling up</p>
+                      <h3 className="font-semibold text-primary mb-1">AI-Generated Growth Reports</h3>
+                      <p className="text-gray-700">Get personalized reports with strengths and improvement areas</p>
                     </div>
                   </div>
                 </div>
 
-                <Link 
+                <Link
                   to="/get-started"
                   className="inline-flex items-center space-x-2 bg-secondary text-white px-6 py-3 rounded-lg font-semibold hover:bg-opacity-90 transition-all duration-300"
                 >
                   <span>Get Started</span>
-                  <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-                  </svg>
+                  <ArrowRight className="w-4 h-4" />
                 </Link>
               </div>
             </div>
@@ -363,7 +369,7 @@ export const Solutions = () => {
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold text-primary mb-4">Benefits Across All Roles</h2>
             <p className="text-xl text-secondary max-w-2xl mx-auto">
-              Core capabilities that empower everyone
+              Core AI capabilities that empower everyone
             </p>
           </div>
 
@@ -372,9 +378,9 @@ export const Solutions = () => {
               <div className="w-16 h-16 bg-accent/10 rounded-full flex items-center justify-center mx-auto mb-4">
                 <Zap className="w-8 h-8 text-accent" />
               </div>
-              <h3 className="text-xl font-bold text-primary mb-2">Real-Time Data</h3>
+              <h3 className="text-xl font-bold text-primary mb-2">Real-Time AI Streaming</h3>
               <p className="text-gray-700">
-                Always up-to-date insights synced from your tools
+                Watch the AI think and respond in real-time as it analyzes your data
               </p>
             </div>
 
@@ -384,7 +390,7 @@ export const Solutions = () => {
               </div>
               <h3 className="text-xl font-bold text-primary mb-2">Privacy First</h3>
               <p className="text-gray-700">
-                Your data is encrypted and never shared without permission
+                AES-256 encryption with secure OAuth. Your data is never shared.
               </p>
             </div>
 
@@ -394,7 +400,7 @@ export const Solutions = () => {
               </div>
               <h3 className="text-xl font-bold text-primary mb-2">Easy Integration</h3>
               <p className="text-gray-700">
-                Connect GitHub and Jira in just a few clicks
+                Connect GitHub, GitLab, and Jira in just a few clicks
               </p>
             </div>
           </div>
@@ -405,20 +411,26 @@ export const Solutions = () => {
       <section className="py-20 bg-gradient-to-br from-primary to-secondary">
         <div className="container mx-auto px-6 text-center">
           <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-            Find Your Perfect Solution
+            Find Your AI-Powered Solution
           </h2>
           <p className="text-xl text-gray-200 mb-10 max-w-2xl mx-auto">
-            Whatever your role, idweo has insights tailored for you
+            Whatever your role, idweo has AI insights tailored for you
           </p>
-          <Link
-            to="/get-started"
-            className="bg-accent text-white px-10 py-4 rounded-lg font-semibold text-lg hover:bg-opacity-90 transition-all duration-300 shadow-xl hover:shadow-2xl hover:scale-105 inline-flex items-center space-x-2"
-          >
-            <span>Start Your Free Trial</span>
-            <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5m0 0l-5 5m5-5H6" />
-            </svg>
-          </Link>
+          <div className="flex flex-col sm:flex-row justify-center gap-4">
+            <Link
+              to="/get-started"
+              className="bg-accent text-white px-10 py-4 rounded-lg font-semibold text-lg hover:bg-opacity-90 transition-all duration-300 shadow-xl hover:shadow-2xl hover:scale-105 inline-flex items-center space-x-2"
+            >
+              <span>Start Free Trial</span>
+              <ArrowRight className="w-5 h-5" />
+            </Link>
+            <Link
+              to="/product"
+              className="bg-white text-primary px-10 py-4 rounded-lg font-semibold text-lg hover:bg-gray-100 transition-all duration-300 inline-flex items-center justify-center"
+            >
+              Explore All Features
+            </Link>
+          </div>
         </div>
       </section>
     </Layout>
