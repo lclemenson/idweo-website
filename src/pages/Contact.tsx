@@ -1,27 +1,69 @@
 import { Layout } from '../components/Layout';
 import { useState } from 'react';
-import { Mail, Phone, MapPin, Send, MessageSquare, Clock, Linkedin, Twitter, Github } from 'lucide-react';
+import { Mail, Phone, MapPin, Send, MessageSquare, Clock, Linkedin, Twitter, Github, CheckCircle, AlertCircle } from 'lucide-react';
 
 export const Contact: React.FC = () => {
   const [formData, setFormData] = useState({
     name: '',
     email: '',
-    company: '',
+    subject: '',
     message: '',
   });
+
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [submitStatus, setSubmitStatus] = useState<'idle' | 'success' | 'error'>('idle');
+  const [statusMessage, setStatusMessage] = useState('');
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     setFormData({
       ...formData,
       [e.target.name]: e.target.value,
     });
+    // Clear status when user starts typing again
+    if (submitStatus !== 'idle') {
+      setSubmitStatus('idle');
+      setStatusMessage('');
+    }
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    // Handle form submission
-    console.log('Form submitted:', formData);
-    // Add your form submission logic here
+    setIsSubmitting(true);
+    setSubmitStatus('idle');
+    setStatusMessage('');
+
+    try {
+      const response = await fetch('http://localhost:8080/api/contact', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(formData),
+      });
+
+      const data = await response.json();
+
+      if (response.ok) {
+        setSubmitStatus('success');
+        setStatusMessage(data.message || 'Your message has been sent successfully!');
+        // Reset form
+        setFormData({
+          name: '',
+          email: '',
+          subject: '',
+          message: '',
+        });
+      } else {
+        setSubmitStatus('error');
+        setStatusMessage(data.error || 'Failed to send message. Please try again.');
+      }
+    } catch (error) {
+      setSubmitStatus('error');
+      setStatusMessage('Network error. Please check your connection and try again.');
+      console.error('Contact form error:', error);
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   return (
@@ -189,6 +231,26 @@ export const Contact: React.FC = () => {
                     </div>
                   </div>
 
+                  {/* Status Message */}
+                  {submitStatus !== 'idle' && (
+                    <div className={`p-4 rounded-lg flex items-start space-x-3 ${
+                      submitStatus === 'success'
+                        ? 'bg-green-50 border border-green-200'
+                        : 'bg-red-50 border border-red-200'
+                    }`}>
+                      {submitStatus === 'success' ? (
+                        <CheckCircle className="w-5 h-5 text-green-600 flex-shrink-0 mt-0.5" />
+                      ) : (
+                        <AlertCircle className="w-5 h-5 text-red-600 flex-shrink-0 mt-0.5" />
+                      )}
+                      <p className={`text-sm ${
+                        submitStatus === 'success' ? 'text-green-800' : 'text-red-800'
+                      }`}>
+                        {statusMessage}
+                      </p>
+                    </div>
+                  )}
+
                   <form onSubmit={handleSubmit} className="space-y-6">
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                       <div>
@@ -205,7 +267,10 @@ export const Contact: React.FC = () => {
                           value={formData.name}
                           onChange={handleChange}
                           required
-                          className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-accent focus:border-transparent transition-all duration-200"
+                          disabled={isSubmitting}
+                          minLength={2}
+                          maxLength={100}
+                          className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-accent focus:border-transparent transition-all duration-200 disabled:bg-gray-100 disabled:cursor-not-allowed"
                           placeholder="John Doe"
                         />
                       </div>
@@ -215,7 +280,7 @@ export const Contact: React.FC = () => {
                           htmlFor="email"
                           className="block text-sm font-medium text-gray-700 mb-2"
                         >
-                          Work Email *
+                          Email *
                         </label>
                         <input
                           type="email"
@@ -224,7 +289,8 @@ export const Contact: React.FC = () => {
                           value={formData.email}
                           onChange={handleChange}
                           required
-                          className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-accent focus:border-transparent transition-all duration-200"
+                          disabled={isSubmitting}
+                          className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-accent focus:border-transparent transition-all duration-200 disabled:bg-gray-100 disabled:cursor-not-allowed"
                           placeholder="john@company.com"
                         />
                       </div>
@@ -232,19 +298,23 @@ export const Contact: React.FC = () => {
 
                     <div>
                       <label
-                        htmlFor="company"
+                        htmlFor="subject"
                         className="block text-sm font-medium text-gray-700 mb-2"
                       >
-                        Company Name
+                        Subject *
                       </label>
                       <input
                         type="text"
-                        id="company"
-                        name="company"
-                        value={formData.company}
+                        id="subject"
+                        name="subject"
+                        value={formData.subject}
                         onChange={handleChange}
-                        className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-accent focus:border-transparent transition-all duration-200"
-                        placeholder="Your Company"
+                        required
+                        disabled={isSubmitting}
+                        minLength={3}
+                        maxLength={200}
+                        className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-accent focus:border-transparent transition-all duration-200 disabled:bg-gray-100 disabled:cursor-not-allowed"
+                        placeholder="What can we help you with?"
                       />
                     </div>
 
@@ -262,17 +332,36 @@ export const Contact: React.FC = () => {
                         value={formData.message}
                         onChange={handleChange}
                         required
-                        className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-accent focus:border-transparent transition-all duration-200 resize-none"
+                        disabled={isSubmitting}
+                        minLength={10}
+                        maxLength={2000}
+                        className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-accent focus:border-transparent transition-all duration-200 resize-none disabled:bg-gray-100 disabled:cursor-not-allowed"
                         placeholder="Tell us how we can help..."
                       ></textarea>
+                      <p className="text-xs text-gray-500 mt-1">
+                        {formData.message.length}/2000 characters
+                      </p>
                     </div>
 
                     <button
                       type="submit"
-                      className="w-full bg-accent text-white px-8 py-4 rounded-lg font-semibold hover:bg-opacity-90 transition-all duration-300 shadow-md hover:shadow-lg flex items-center justify-center space-x-2"
+                      disabled={isSubmitting}
+                      className="w-full bg-accent text-white px-8 py-4 rounded-lg font-semibold hover:bg-opacity-90 transition-all duration-300 shadow-md hover:shadow-lg flex items-center justify-center space-x-2 disabled:bg-gray-400 disabled:cursor-not-allowed disabled:hover:shadow-md"
                     >
-                      <Send className="w-5 h-5" />
-                      <span>Send Message</span>
+                      {isSubmitting ? (
+                        <>
+                          <svg className="animate-spin h-5 w-5 text-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+                            <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4"></circle>
+                            <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
+                          </svg>
+                          <span>Sending...</span>
+                        </>
+                      ) : (
+                        <>
+                          <Send className="w-5 h-5" />
+                          <span>Send Message</span>
+                        </>
+                      )}
                     </button>
 
                     <p className="text-sm text-gray-500 text-center">
