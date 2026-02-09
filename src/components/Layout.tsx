@@ -240,18 +240,13 @@ export const Layout: React.FC<LayoutProps> = ({ children, seo }) => {
                     </Link>
                   </li>
                   <li>
-                    <Link to="/team" className="hover:text-accent transition-colors duration-200">
-                      Team
+                    <Link to="/contact" className="hover:text-accent transition-colors duration-200">
+                      Contact
                     </Link>
                   </li>
                   <li>
-                    <Link to="/careers" className="hover:text-accent transition-colors duration-200">
-                      Careers
-                    </Link>
-                  </li>
-                  <li>
-                    <Link to="/blog" className="hover:text-accent transition-colors duration-200">
-                      Blog
+                    <Link to="/get-started" className="hover:text-accent transition-colors duration-200">
+                      Get Started
                     </Link>
                   </li>
                 </ul>
@@ -262,23 +257,18 @@ export const Layout: React.FC<LayoutProps> = ({ children, seo }) => {
                 <h3 className="text-white font-semibold text-lg mb-4">Resources</h3>
                 <ul className="space-y-3">
                   <li>
-                    <Link to="/documentation" className="hover:text-accent transition-colors duration-200">
-                      Documentation
+                    <Link to="/product" className="hover:text-accent transition-colors duration-200">
+                      Product
                     </Link>
                   </li>
                   <li>
-                    <Link to="/api" className="hover:text-accent transition-colors duration-200">
-                      API Reference
+                    <Link to="/solutions" className="hover:text-accent transition-colors duration-200">
+                      Solutions
                     </Link>
                   </li>
                   <li>
-                    <Link to="/support" className="hover:text-accent transition-colors duration-200">
-                      Support Center
-                    </Link>
-                  </li>
-                  <li>
-                    <Link to="/privacy" className="hover:text-accent transition-colors duration-200">
-                      Privacy Policy
+                    <Link to="/pricing" className="hover:text-accent transition-colors duration-200">
+                      Pricing
                     </Link>
                   </li>
                 </ul>
@@ -314,30 +304,30 @@ export const Layout: React.FC<LayoutProps> = ({ children, seo }) => {
                 
                 {/* Social Media Links */}
                 <div className="flex space-x-4 mt-6">
-                  <a 
-                    href="https://linkedin.com" 
-                    target="_blank" 
+                  <a
+                    href="https://linkedin.com/company/idweo"
+                    target="_blank"
                     rel="noopener noreferrer"
                     className="hover:text-accent transition-colors duration-200"
-                    aria-label="LinkedIn"
+                    aria-label="Follow Idweo on LinkedIn"
                   >
                     <Linkedin className="w-5 h-5" />
                   </a>
-                  <a 
-                    href="https://twitter.com" 
-                    target="_blank" 
+                  <a
+                    href="https://twitter.com/idweo"
+                    target="_blank"
                     rel="noopener noreferrer"
                     className="hover:text-accent transition-colors duration-200"
-                    aria-label="Twitter"
+                    aria-label="Follow Idweo on Twitter"
                   >
                     <Twitter className="w-5 h-5" />
                   </a>
-                  <a 
-                    href="https://github.com" 
-                    target="_blank" 
+                  <a
+                    href="https://github.com/idweo"
+                    target="_blank"
                     rel="noopener noreferrer"
                     className="hover:text-accent transition-colors duration-200"
-                    aria-label="GitHub"
+                    aria-label="Idweo on GitHub"
                   >
                     <Github className="w-5 h-5" />
                   </a>

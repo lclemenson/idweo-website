@@ -19,6 +19,17 @@ export const generateOrganizationStructuredData = (): StructuredData => {
   return generateStructuredData('Organization', {
     name: defaultSiteName,
     url: defaultSiteUrl,
+    logo: `${defaultSiteUrl}/idweo.png`,
+    contactPoint: {
+      '@type': 'ContactPoint',
+      email: 'contact@idweo.com',
+      contactType: 'customer service',
+    },
+    sameAs: [
+      'https://linkedin.com/company/idweo',
+      'https://twitter.com/idweo',
+      'https://github.com/idweo',
+    ],
   });
 };
 
@@ -26,14 +37,6 @@ export const generateWebSiteStructuredData = (): StructuredData => {
   return generateStructuredData('WebSite', {
     name: defaultSiteName,
     url: defaultSiteUrl,
-    potentialAction: {
-      '@type': 'SearchAction',
-      target: {
-        '@type': 'EntryPoint',
-        urlTemplate: `${defaultSiteUrl}/search?q={search_term_string}`,
-      },
-      'query-input': 'required name=search_term_string',
-    },
   });
 };
 
@@ -42,7 +45,7 @@ export const getDefaultSEO = (): SEOProps => {
     title: `${defaultSiteName} - Engineering Portal`,
     description: 'Idweo Engineering Portal - Streamline your development workflow',
     keywords: ['engineering', 'development', 'portal', 'idweo'],
-    image: `${defaultSiteUrl}/og-image.jpg`,
+    image: `${defaultSiteUrl}/idweo.png`,
     url: defaultSiteUrl,
     type: 'website',
     siteName: defaultSiteName,

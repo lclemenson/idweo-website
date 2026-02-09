@@ -20,16 +20,43 @@ export const sitemapRoutes: SitemapEntry[] = [
     url: `${baseUrl}/`,
     changefreq: 'daily',
     priority: 1.0,
+    lastmod: new Date().toISOString().split('T')[0],
+  },
+  {
+    url: `${baseUrl}/product`,
+    changefreq: 'weekly',
+    priority: 0.9,
+    lastmod: new Date().toISOString().split('T')[0],
+  },
+  {
+    url: `${baseUrl}/solutions`,
+    changefreq: 'weekly',
+    priority: 0.9,
+    lastmod: new Date().toISOString().split('T')[0],
+  },
+  {
+    url: `${baseUrl}/pricing`,
+    changefreq: 'weekly',
+    priority: 0.8,
+    lastmod: new Date().toISOString().split('T')[0],
   },
   {
     url: `${baseUrl}/about`,
     changefreq: 'monthly',
-    priority: 0.8,
+    priority: 0.7,
+    lastmod: new Date().toISOString().split('T')[0],
   },
   {
     url: `${baseUrl}/contact`,
     changefreq: 'monthly',
     priority: 0.7,
+    lastmod: new Date().toISOString().split('T')[0],
+  },
+  {
+    url: `${baseUrl}/get-started`,
+    changefreq: 'monthly',
+    priority: 0.8,
+    lastmod: new Date().toISOString().split('T')[0],
   },
 ];
 
