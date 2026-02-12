@@ -16,6 +16,7 @@ import {
   Sparkles,
   FileText,
   ArrowRight,
+  Link as LinkIcon,
 } from 'lucide-react';
 
 export const metadata: Metadata = {

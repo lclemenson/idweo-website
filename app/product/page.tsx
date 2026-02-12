@@ -128,7 +128,7 @@ export default function ProductPage() {
                     </div>
                   </div>
                   <Link
-                    to="/automated-coding"
+                    href="/automated-coding"
                     className="inline-flex items-center space-x-2 bg-accent text-white px-6 py-3 rounded-lg font-semibold hover:bg-opacity-90 transition-all duration-300 shadow-lg hover:shadow-xl"
                   >
                     <span>Learn More</span>

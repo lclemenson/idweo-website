@@ -1,6 +1,7 @@
-import { Layout } from '../components/Layout';
-import { TabShowcase } from '../components/TabShowcase';
-import { Link } from 'react-router-dom';
+'use client';
+
+import Link from 'next/link';
+import { TabShowcase } from '@/components/TabShowcase';
 import {
   Code2,
   GitPullRequest,
@@ -20,7 +21,7 @@ import {
   TrendingUp
 } from 'lucide-react';
 
-export const AutomatedCoding = () => {
+export default function AutomatedCodingPage() {
   const workflowTabs = [
     {
       id: 'select',
@@ -60,13 +61,7 @@ export const AutomatedCoding = () => {
   ];
 
   return (
-    <Layout
-      seo={{
-        title: 'Automated Coding - idweo | AI-Powered Development Automation',
-        description: 'Automate your development workflow with AI. Select Jira tickets, let Claude Code implement them, collaborate via Slack, and get automatic pull requests. Save hours every day.',
-        keywords: ['automated coding', 'AI development', 'Claude Code', 'Jira automation', 'Slack integration', 'pull request automation', 'AI coding assistant'],
-      }}
-    >
+    <>
       {/* Hero Section */}
       <section className="relative bg-gradient-to-br from-primary via-primary/95 to-secondary py-20">
         <div className="absolute inset-0 opacity-10">
@@ -94,14 +89,14 @@ export const AutomatedCoding = () => {
 
           <div className="flex flex-col sm:flex-row justify-center gap-4">
             <Link
-              to="/get-started"
+              href="/get-started"
               className="bg-accent text-white px-8 py-4 rounded-lg font-semibold hover:bg-opacity-90 transition-all duration-300 shadow-lg hover:shadow-xl inline-flex items-center justify-center space-x-2"
             >
               <Sparkles className="w-5 h-5" />
               <span>Start Automating</span>
             </Link>
             <Link
-              to="/contact"
+              href="/contact"
               className="bg-white/10 backdrop-blur-sm border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-primary transition-all duration-300 inline-flex items-center justify-center"
             >
               Schedule Demo
@@ -556,14 +551,14 @@ export const AutomatedCoding = () => {
           </p>
           <div className="flex flex-col sm:flex-row justify-center gap-4">
             <Link
-              to="/get-started"
+              href="/get-started"
               className="bg-accent text-white px-10 py-4 rounded-lg font-semibold text-lg hover:bg-opacity-90 transition-all duration-300 shadow-xl hover:shadow-2xl hover:scale-105 inline-flex items-center justify-center space-x-2"
             >
               <span>Start Free Trial</span>
               <ArrowRight className="w-5 h-5" />
             </Link>
             <Link
-              to="/contact"
+              href="/contact"
               className="bg-white text-primary px-10 py-4 rounded-lg font-semibold text-lg hover:bg-gray-100 transition-all duration-300 inline-flex items-center justify-center"
             >
               Talk to Sales
@@ -571,6 +566,6 @@ export const AutomatedCoding = () => {
           </div>
         </div>
       </section>
-    </Layout>
+    </>
   );
-};
+}
