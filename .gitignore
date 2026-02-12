@@ -55,8 +55,7 @@ ehthumbs.db
 Thumbs.db
 Desktop.ini
 
-# Package manager files
-package-lock.json
+# Package manager files (keep package-lock.json for CI/CD)
 yarn.lock
 pnpm-lock.yaml
 .npm
