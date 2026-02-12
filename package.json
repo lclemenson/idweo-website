@@ -6,6 +6,7 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
+    "export": "next build",
     "lint": "next lint",
     "format": "prettier --write \"app/**/*.{ts,tsx,js,jsx,json,css,scss,md}\" \"components/**/*.{ts,tsx}\""
   },
