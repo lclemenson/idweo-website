@@ -16,7 +16,10 @@ import {
   Calculator,
   FileText,
   RefreshCw,
-  Search
+  Search,
+  Code2,
+  GitPullRequest,
+  ArrowRight
 } from 'lucide-react';
 
 export const Product = () => {
@@ -101,8 +104,100 @@ export const Product = () => {
         </div>
       </section>
 
-      {/* Core Features Section */}
+      {/* NEW: Automated Coding Feature Highlight */}
       <section className="py-20 bg-white">
+        <div className="container mx-auto px-6">
+          <div className="max-w-6xl mx-auto">
+            <div className="relative overflow-hidden bg-gradient-to-br from-primary via-primary/95 to-secondary rounded-2xl p-8 md:p-12">
+              <div className="absolute inset-0 opacity-10">
+                <div className="absolute inset-0" style={{
+                  backgroundImage: 'radial-gradient(circle at 2px 2px, white 1px, transparent 0)',
+                  backgroundSize: '40px 40px'
+                }} />
+              </div>
+
+              <div className="relative grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
+                <div>
+                  <div className="inline-block bg-accent/20 backdrop-blur-sm px-3 py-1 rounded-full mb-4">
+                    <span className="text-accent font-semibold text-sm">NEW FEATURE</span>
+                  </div>
+                  <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+                    Automated Coding with AI
+                  </h2>
+                  <p className="text-lg text-gray-200 mb-6 leading-relaxed">
+                    Select Jira tickets, let Claude Code implement them automatically, collaborate via Slack
+                    when questions arise, and receive production-ready pull requests. Save hours every day.
+                  </p>
+                  <div className="flex flex-wrap gap-3 mb-8">
+                    <div className="flex items-center space-x-2 bg-white/10 backdrop-blur-sm px-3 py-2 rounded-lg">
+                      <Code2 className="w-4 h-4 text-accent" />
+                      <span className="text-white text-sm">Jira Integration</span>
+                    </div>
+                    <div className="flex items-center space-x-2 bg-white/10 backdrop-blur-sm px-3 py-2 rounded-lg">
+                      <MessageSquare className="w-4 h-4 text-accent" />
+                      <span className="text-white text-sm">Slack Q&A</span>
+                    </div>
+                    <div className="flex items-center space-x-2 bg-white/10 backdrop-blur-sm px-3 py-2 rounded-lg">
+                      <GitPullRequest className="w-4 h-4 text-accent" />
+                      <span className="text-white text-sm">Auto PRs</span>
+                    </div>
+                  </div>
+                  <Link
+                    to="/automated-coding"
+                    className="inline-flex items-center space-x-2 bg-accent text-white px-6 py-3 rounded-lg font-semibold hover:bg-opacity-90 transition-all duration-300 shadow-lg hover:shadow-xl"
+                  >
+                    <span>Learn More</span>
+                    <ArrowRight className="w-4 h-4" />
+                  </Link>
+                </div>
+
+                <div className="relative">
+                  <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20">
+                    <div className="space-y-4">
+                      <div className="flex items-center justify-between">
+                        <span className="text-white/70 text-sm">Workflow Progress</span>
+                        <span className="text-accent font-semibold">3 of 5 tickets</span>
+                      </div>
+                      <div className="space-y-3">
+                        <div className="flex items-center space-x-3 bg-white/10 rounded-lg p-3">
+                          <div className="w-8 h-8 bg-green-500/20 rounded-full flex items-center justify-center">
+                            <Code2 className="w-4 h-4 text-green-400" />
+                          </div>
+                          <div className="flex-1">
+                            <p className="text-white text-sm font-medium">PROJ-142 - Avatar upload</p>
+                            <p className="text-green-400 text-xs">PR created</p>
+                          </div>
+                        </div>
+                        <div className="flex items-center space-x-3 bg-white/10 rounded-lg p-3">
+                          <div className="w-8 h-8 bg-accent/20 rounded-full flex items-center justify-center">
+                            <MessageSquare className="w-4 h-4 text-accent" />
+                          </div>
+                          <div className="flex-1">
+                            <p className="text-white text-sm font-medium">PROJ-156 - Date picker fix</p>
+                            <p className="text-accent text-xs">Awaiting response via Slack</p>
+                          </div>
+                        </div>
+                        <div className="flex items-center space-x-3 bg-white/10 rounded-lg p-3">
+                          <div className="w-8 h-8 bg-blue-500/20 rounded-full flex items-center justify-center">
+                            <Bot className="w-4 h-4 text-blue-400" />
+                          </div>
+                          <div className="flex-1">
+                            <p className="text-white text-sm font-medium">PROJ-163 - CSV export</p>
+                            <p className="text-blue-400 text-xs">Claude Code implementing...</p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Core Features Section */}
+      <section className="py-20 bg-gray-50">
         <div className="container mx-auto px-6">
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold text-primary mb-4">Intelligent Features, Instant Insights</h2>

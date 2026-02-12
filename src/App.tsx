@@ -7,6 +7,7 @@ import { Product } from './pages/Product';
 import { Solutions } from './pages/Solutions';
 import { Pricing } from './pages/Pricing';
 import { GetStarted } from './pages/GetStarted';
+import { AutomatedCoding } from './pages/AutomatedCoding';
 import { NotFound } from './pages/NotFound';
 
 function App() {
@@ -21,6 +22,7 @@ function App() {
           <Route path="/solutions" element={<Solutions />} />
           <Route path="/pricing" element={<Pricing />} />
           <Route path="/get-started" element={<GetStarted />} />
+          <Route path="/automated-coding" element={<AutomatedCoding />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
       </BrowserRouter>

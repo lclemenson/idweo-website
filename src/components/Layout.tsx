@@ -66,21 +66,32 @@ export const Layout: React.FC<LayoutProps> = ({ children, seo }) => {
               
               {/* Navigation Links */}
               <nav className="hidden md:flex items-center space-x-8" aria-label="Main menu">
-                <Link 
-                  to="/product" 
+                <Link
+                  to="/product"
                   className={`font-medium transition-colors duration-300 ${
-                    scrolled 
-                      ? 'text-white hover:text-accent' 
+                    scrolled
+                      ? 'text-white hover:text-accent'
                       : 'text-primary hover:text-secondary'
                   }`}
                 >
                   Product
                 </Link>
-                <Link 
-                  to="/solutions" 
+                <Link
+                  to="/automated-coding"
+                  className={`font-medium transition-colors duration-300 flex items-center space-x-1 ${
+                    scrolled
+                      ? 'text-white hover:text-accent'
+                      : 'text-primary hover:text-secondary'
+                  }`}
+                >
+                  <span>Automated Coding</span>
+                  <span className="bg-accent text-white text-[10px] px-1.5 py-0.5 rounded-full font-semibold">NEW</span>
+                </Link>
+                <Link
+                  to="/solutions"
                   className={`font-medium transition-colors duration-300 ${
-                    scrolled 
-                      ? 'text-white hover:text-accent' 
+                    scrolled
+                      ? 'text-white hover:text-accent'
                       : 'text-primary hover:text-secondary'
                   }`}
                 >
@@ -132,23 +143,35 @@ export const Layout: React.FC<LayoutProps> = ({ children, seo }) => {
             {mobileMenuOpen && (
               <div className="md:hidden mt-4 pb-4 border-t border-gray-200">
                 <div className="flex flex-col space-y-4 mt-4">
-                  <Link 
-                    to="/product" 
+                  <Link
+                    to="/product"
                     onClick={toggleMobileMenu}
                     className={`font-medium transition-colors duration-300 ${
-                      scrolled 
-                        ? 'text-white hover:text-accent' 
+                      scrolled
+                        ? 'text-white hover:text-accent'
                         : 'text-primary hover:text-secondary'
                     }`}
                   >
                     Product
                   </Link>
-                  <Link 
-                    to="/solutions" 
+                  <Link
+                    to="/automated-coding"
+                    onClick={toggleMobileMenu}
+                    className={`font-medium transition-colors duration-300 flex items-center space-x-2 ${
+                      scrolled
+                        ? 'text-white hover:text-accent'
+                        : 'text-primary hover:text-secondary'
+                    }`}
+                  >
+                    <span>Automated Coding</span>
+                    <span className="bg-accent text-white text-[10px] px-1.5 py-0.5 rounded-full font-semibold">NEW</span>
+                  </Link>
+                  <Link
+                    to="/solutions"
                     onClick={toggleMobileMenu}
                     className={`font-medium transition-colors duration-300 ${
-                      scrolled 
-                        ? 'text-white hover:text-accent' 
+                      scrolled
+                        ? 'text-white hover:text-accent'
                         : 'text-primary hover:text-secondary'
                     }`}
                   >
@@ -215,6 +238,12 @@ export const Layout: React.FC<LayoutProps> = ({ children, seo }) => {
                   <li>
                     <Link to="/product" className="hover:text-accent transition-colors duration-200">
                       Product
+                    </Link>
+                  </li>
+                  <li>
+                    <Link to="/automated-coding" className="hover:text-accent transition-colors duration-200 flex items-center space-x-1">
+                      <span>Automated Coding</span>
+                      <span className="bg-accent text-white text-[10px] px-1.5 py-0.5 rounded-full font-semibold">NEW</span>
                     </Link>
                   </li>
                   <li>
