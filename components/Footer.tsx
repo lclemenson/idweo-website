@@ -35,11 +35,6 @@ export const Footer = () => {
                   Solutions
                 </Link>
               </li>
-              <li>
-                <Link href="/pricing" className="hover:text-accent transition-colors duration-200">
-                  Pricing
-                </Link>
-              </li>
             </ul>
           </div>
 
@@ -58,8 +53,8 @@ export const Footer = () => {
                 </Link>
               </li>
               <li>
-                <Link href="/get-started" className="hover:text-accent transition-colors duration-200">
-                  Get Started
+                <Link href="/contact" className="hover:text-accent transition-colors duration-200">
+                  Request Demo
                 </Link>
               </li>
             </ul>
@@ -79,11 +74,6 @@ export const Footer = () => {
                   Solutions
                 </Link>
               </li>
-              <li>
-                <Link href="/pricing" className="hover:text-accent transition-colors duration-200">
-                  Pricing
-                </Link>
-              </li>
             </ul>
           </div>
 
@@ -100,22 +90,14 @@ export const Footer = () => {
                   contact@idweo.com
                 </a>
               </li>
-              <li className="flex items-start space-x-3">
-                <Phone className="w-5 h-5 text-accent mt-0.5 flex-shrink-0" />
-                <a
-                  href="tel:+1234567890"
-                  className="hover:text-accent transition-colors duration-200"
-                >
-                  +1 (234) 567-890
-                </a>
-              </li>
+             
               <li className="flex items-start space-x-3">
                 <MapPin className="w-5 h-5 text-accent mt-0.5 flex-shrink-0" />
-                <span>San Francisco, CA</span>
+                <span>London, UK</span>
               </li>
             </ul>
 
-            {/* Social Media Links */}
+            {/* Social Media Links
             <div className="flex space-x-4 mt-6">
               <a
                 href="https://linkedin.com/company/idweo"
@@ -144,7 +126,7 @@ export const Footer = () => {
               >
                 <Github className="w-5 h-5" />
               </a>
-            </div>
+            </div> */}
           </div>
         </div>
 

@@ -20,16 +20,18 @@ import {
 } from 'lucide-react';
 
 export const metadata: Metadata = {
-  title: 'Product - AI Engineering Intelligence Platform',
+  title: 'Product - Complete Engineering Automation Platform',
   description:
-    'Discover how idweo helps engineering teams with AI-powered analytics, natural language queries, and intelligent estimation. Track developer performance, detect AI usage, and optimize your team.',
+    'Automated PRD-to-production workflows with MCP integrations. AI evaluates tickets, routes to developers via Slack, and generates code automatically. Zero manual intervention required.',
   keywords: [
-    'AI engineering platform',
-    'developer analytics',
-    'AI code detection',
-    'story point estimation',
-    'GitHub analytics',
-    'Jira integration',
+    'engineering automation',
+    'PRD automation',
+    'automated ticket routing',
+    'MCP integrations',
+    'AI code generation',
+    'GitHub automation',
+    'Slack integration',
+    'Bootstack',
   ],
 };
 
@@ -54,29 +56,29 @@ export default function ProductPage() {
           </div>
 
           <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
-            Your AI Co-Pilot for
+            Complete Engineering
             <br />
-            <span className="text-accent">Engineering Intelligence</span>
+            <span className="text-accent">Automation Platform</span>
           </h1>
 
           <p className="text-xl text-gray-200 max-w-3xl mx-auto mb-10 leading-relaxed">
-            From natural language data queries to AI-powered estimates, idweo transforms how you
-            understand and optimize engineering performance. Ask questions, get insights, ship faster.
+            From PRD intake to production deployment. Automated ticket generation, AI quality evaluation,
+            smart routing, and autonomous code implementation. The future of engineering is here.
           </p>
 
           <div className="flex flex-col sm:flex-row justify-center gap-4">
             <Link
-              href="/get-started"
+              href="/contact"
               className="bg-accent text-white px-8 py-4 rounded-lg font-semibold hover:bg-opacity-90 transition-all duration-300 shadow-lg hover:shadow-xl inline-flex items-center justify-center space-x-2"
             >
               <MessageSquare className="w-5 h-5" />
-              <span>Try AI Chat Free</span>
+              <span>Request Demo</span>
             </Link>
             <Link
-              href="/pricing"
+              href="/contact"
               className="bg-white/10 backdrop-blur-sm border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-primary transition-all duration-300 inline-flex items-center justify-center"
             >
-              View Pricing
+              Contact Us
             </Link>
           </div>
         </div>
@@ -87,124 +89,129 @@ export default function ProductPage() {
         <div className="container mx-auto px-6">
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold text-primary mb-4">
-              Intelligent Features, Instant Insights
+              Zero Manual Work, 100% Automation
             </h2>
             <p className="text-xl text-secondary max-w-2xl mx-auto">
-              Everything you need to understand and optimize your engineering performance
+              Every feature designed to eliminate manual processes and accelerate delivery
             </p>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-7xl mx-auto">
-            {/* Feature 1 - AI Chat Agent (HIGH) */}
-            <div className="group bg-white border-2 border-accent rounded-lg p-6 hover:shadow-xl transition-all duration-300 hover:-translate-y-1 col-span-1 md:col-span-2 lg:col-span-2">
-              <span className="inline-block bg-accent/10 text-accent text-xs font-semibold px-2 py-1 rounded-full mb-3">
-                Featured
+            {/* Feature 1 - PRD-to-Code Automation (NEW & HIGHEST) */}
+            <div className="group bg-gradient-to-br from-accent to-secondary border-2 border-accent rounded-lg p-6 hover:shadow-xl transition-all duration-300 hover:-translate-y-1 col-span-1 md:col-span-2 lg:col-span-2">
+              <span className="inline-block bg-white/20 text-white text-xs font-semibold px-2 py-1 rounded-full mb-3">
+                🚀 Revolutionary
               </span>
-              <div className="w-14 h-14 bg-accent rounded-lg flex items-center justify-center mb-4">
-                <MessageSquare className="w-7 h-7 text-white" />
+              <div className="w-14 h-14 bg-white/20 backdrop-blur-sm rounded-lg flex items-center justify-center mb-4">
+                <Zap className="w-7 h-7 text-white" />
               </div>
-              <h3 className="text-xl font-bold text-primary mb-2">AI Chat Agent</h3>
-              <p className="text-gray-700 leading-relaxed mb-4">
-                Query your engineering data using natural language. Ask questions like &quot;Who had
-                the most commits last month?&quot; and get instant, accurate answers with real-time
-                streaming responses.
+              <h3 className="text-xl font-bold text-white mb-2">PRD-to-Production Automation</h3>
+              <p className="text-white/90 leading-relaxed mb-4">
+                Complete workflow automation. Submit PRDs, AI generates tickets, evaluates quality,
+                routes to developers via Slack, implements code, and creates PRs. Zero manual steps.
               </p>
-              <div className="bg-gray-50 rounded-lg p-3 text-sm text-gray-600 font-mono">
-                &quot;What&apos;s our team velocity this sprint?&quot; &rarr;
+              <div className="bg-white/10 backdrop-blur-sm rounded-lg p-3 text-sm text-white font-mono">
+                PRD → Tickets → Routing → Code → QA (100% automated)
               </div>
             </div>
 
-            {/* Feature 2 - Developer Analytics (HIGH) */}
-            <div className="group bg-white border-2 border-accent rounded-lg p-6 hover:shadow-xl transition-all duration-300 hover:-translate-y-1 col-span-1 md:col-span-2 lg:col-span-2">
-              <span className="inline-block bg-accent/10 text-accent text-xs font-semibold px-2 py-1 rounded-full mb-3">
-                Featured
+            {/* Feature 2 - MCP Integrations (NEW & HIGH) */}
+            <div className="group bg-white border-2 border-secondary rounded-lg p-6 hover:shadow-xl transition-all duration-300 hover:-translate-y-1 col-span-1 md:col-span-2 lg:col-span-2">
+              <span className="inline-block bg-secondary/10 text-secondary text-xs font-semibold px-2 py-1 rounded-full mb-3">
+                New Feature
               </span>
-              <div className="w-14 h-14 bg-accent rounded-lg flex items-center justify-center mb-4">
-                <BarChart3 className="w-7 h-7 text-white" />
+              <div className="w-14 h-14 bg-secondary rounded-lg flex items-center justify-center mb-4">
+                <LinkIcon className="w-7 h-7 text-white" />
               </div>
-              <h3 className="text-xl font-bold text-primary mb-2">Developer Analytics</h3>
+              <h3 className="text-xl font-bold text-primary mb-2">MCP Native Integrations</h3>
               <p className="text-gray-700 leading-relaxed mb-4">
-                Track commits, performance grades (A-F), monthly trends, and time spent. Understand
-                team productivity at a glance with comprehensive dashboards.
+                Next-gen protocol integrations with GitHub, Slack, and Bootstack via MCP.
+                Seamless data flow and real-time automation across your entire stack.
               </p>
-              <div className="flex items-center space-x-4">
-                <GradeBadgeRow />
-                <span className="text-sm text-gray-500">Performance Grades</span>
+              <div className="flex items-center space-x-3">
+                <span className="bg-gray-100 px-3 py-1 rounded text-xs font-semibold text-gray-700">GitHub</span>
+                <span className="bg-gray-100 px-3 py-1 rounded text-xs font-semibold text-gray-700">Slack</span>
+                <span className="bg-gray-100 px-3 py-1 rounded text-xs font-semibold text-gray-700">Bootstack</span>
               </div>
             </div>
 
-            {/* Feature 3 - AI Code Detection (MEDIUM) */}
-            <div className="group bg-white border border-gray-200 rounded-lg p-6 hover:shadow-xl hover:border-accent transition-all duration-300 hover:-translate-y-1">
-              <div className="w-12 h-12 bg-secondary/10 rounded-lg flex items-center justify-center mb-4 group-hover:bg-secondary group-hover:scale-110 transition-all duration-300">
-                <Bot className="w-6 h-6 text-secondary group-hover:text-white" />
-              </div>
-              <h3 className="text-lg font-bold text-primary mb-2">AI Code Detection</h3>
-              <p className="text-gray-700 text-sm leading-relaxed mb-3">
-                Detect Copilot & Cursor usage with confidence scores. Track AI-assisted code across
-                your team.
-              </p>
-              <AIUsageBar percentage={35} label="Team AI Usage" />
-            </div>
-
-            {/* Feature 4 - Magic Estimates (MEDIUM) */}
-            <div className="group bg-white border border-gray-200 rounded-lg p-6 hover:shadow-xl hover:border-accent transition-all duration-300 hover:-translate-y-1">
+            {/* Feature 3 - AI Quality Evaluation (NEW & MEDIUM) */}
+            <div className="group bg-white border-2 border-accent/50 rounded-lg p-6 hover:shadow-xl hover:border-accent transition-all duration-300 hover:-translate-y-1">
               <div className="w-12 h-12 bg-accent/10 rounded-lg flex items-center justify-center mb-4 group-hover:bg-accent group-hover:scale-110 transition-all duration-300">
-                <Sparkles className="w-6 h-6 text-accent group-hover:text-white" />
+                <Target className="w-6 h-6 text-accent group-hover:text-white" />
               </div>
-              <h3 className="text-lg font-bold text-primary mb-2">Magic Estimates</h3>
+              <h3 className="text-lg font-bold text-primary mb-2">AI Quality Evaluation</h3>
               <p className="text-gray-700 text-sm leading-relaxed mb-3">
-                AI-powered story point estimation with ticket quality scores. Get better estimates in
-                seconds.
+                Every ticket scored 1-10 for quality and completeness before routing. Low-quality tickets
+                auto-rejected with improvement feedback.
               </p>
               <div className="flex items-center space-x-2">
-                <span className="bg-blue-100 text-blue-700 px-2 py-1 rounded text-sm font-bold">
-                  5 pts
+                <span className="bg-green-100 text-green-700 px-2 py-1 rounded text-sm font-bold">
+                  8.5/10
                 </span>
-                <span className="text-sm text-gray-500">AI Estimate</span>
+                <span className="text-sm text-gray-500">Quality Score</span>
               </div>
             </div>
 
-            {/* Feature 5 - Jira Integration (MEDIUM) */}
-            <div className="group bg-white border border-gray-200 rounded-lg p-6 hover:shadow-xl hover:border-accent transition-all duration-300 hover:-translate-y-1">
+            {/* Feature 4 - Smart Routing (NEW & MEDIUM) */}
+            <div className="group bg-white border-2 border-secondary/50 rounded-lg p-6 hover:shadow-xl hover:border-secondary transition-all duration-300 hover:-translate-y-1">
               <div className="w-12 h-12 bg-secondary/10 rounded-lg flex items-center justify-center mb-4 group-hover:bg-secondary group-hover:scale-110 transition-all duration-300">
-                <LinkIcon className="w-6 h-6 text-secondary group-hover:text-white" />
+                <MessageSquare className="w-6 h-6 text-secondary group-hover:text-white" />
               </div>
-              <h3 className="text-lg font-bold text-primary mb-2">Jira Integration</h3>
+              <h3 className="text-lg font-bold text-primary mb-2">Smart Slack Routing</h3>
+              <p className="text-gray-700 text-sm leading-relaxed mb-3">
+                Automatically route tickets to developers via Slack with full context, quality score,
+                and implementation guidance.
+              </p>
+              <div className="flex items-center space-x-2">
+                <span className="bg-purple-100 text-purple-700 px-2 py-1 rounded text-sm font-bold">
+                  Auto-Routed
+                </span>
+                <span className="text-sm text-gray-500">to Slack</span>
+              </div>
+            </div>
+
+            {/* Feature 5 - Auto Code Generation (NEW & HIGH) */}
+            <div className="group bg-white border border-gray-200 rounded-lg p-6 hover:shadow-xl hover:border-accent transition-all duration-300 hover:-translate-y-1">
+              <div className="w-12 h-12 bg-green-100 rounded-lg flex items-center justify-center mb-4 group-hover:bg-green-500 group-hover:scale-110 transition-all duration-300">
+                <Bot className="w-6 h-6 text-green-600 group-hover:text-white" />
+              </div>
+              <h3 className="text-lg font-bold text-primary mb-2">Autonomous Coding</h3>
               <p className="text-gray-700 text-sm leading-relaxed">
-                Seamless ticket sync and AI analysis. Connect your Jira instance in minutes.
+                AI implements tickets automatically, runs tests, and creates PRs for QA review. Full autonomy.
               </p>
             </div>
 
-            {/* Feature 6 - Project Estimates (LOW) */}
+            {/* Feature 6 - Real-time Tracking (NEW) */}
             <div className="group bg-white border border-gray-200 rounded-lg p-6 hover:shadow-xl hover:border-accent transition-all duration-300 hover:-translate-y-1">
               <div className="w-12 h-12 bg-accent/10 rounded-lg flex items-center justify-center mb-4 group-hover:bg-accent group-hover:scale-110 transition-all duration-300">
-                <Calculator className="w-6 h-6 text-accent group-hover:text-white" />
+                <BarChart3 className="w-6 h-6 text-accent group-hover:text-white" />
               </div>
-              <h3 className="text-lg font-bold text-primary mb-2">Project Estimates</h3>
+              <h3 className="text-lg font-bold text-primary mb-2">Pipeline Analytics</h3>
               <p className="text-gray-700 text-sm leading-relaxed">
-                Epic and sprint estimation with AI insights. Plan capacity based on real data.
+                Track every step from PRD to production in real-time. Complete visibility across the automation pipeline.
               </p>
             </div>
 
-            {/* Feature 7 - Repository Management (LOW) */}
+            {/* Feature 7 - AI Chat Intelligence */}
             <div className="group bg-white border border-gray-200 rounded-lg p-6 hover:shadow-xl hover:border-accent transition-all duration-300 hover:-translate-y-1">
               <div className="w-12 h-12 bg-secondary/10 rounded-lg flex items-center justify-center mb-4 group-hover:bg-secondary group-hover:scale-110 transition-all duration-300">
-                <GitBranch className="w-6 h-6 text-secondary group-hover:text-white" />
+                <MessageSquare className="w-6 h-6 text-secondary group-hover:text-white" />
               </div>
-              <h3 className="text-lg font-bold text-primary mb-2">Repository Management</h3>
+              <h3 className="text-lg font-bold text-primary mb-2">AI Chat Intelligence</h3>
               <p className="text-gray-700 text-sm leading-relaxed">
-                Connect GitHub and GitLab repositories. Automatic commit sync and analysis.
+                Ask about PRDs, ticket status, automation pipeline, and team performance in natural language.
               </p>
             </div>
 
-            {/* Feature 8 - Performance Reports (LOW) */}
+            {/* Feature 8 - Developer Analytics */}
             <div className="group bg-white border border-gray-200 rounded-lg p-6 hover:shadow-xl hover:border-accent transition-all duration-300 hover:-translate-y-1">
               <div className="w-12 h-12 bg-accent/10 rounded-lg flex items-center justify-center mb-4 group-hover:bg-accent group-hover:scale-110 transition-all duration-300">
-                <FileText className="w-6 h-6 text-accent group-hover:text-white" />
+                <TrendingUp className="w-6 h-6 text-accent group-hover:text-white" />
               </div>
-              <h3 className="text-lg font-bold text-primary mb-2">AI Performance Reports</h3>
+              <h3 className="text-lg font-bold text-primary mb-2">Developer Analytics</h3>
               <p className="text-gray-700 text-sm leading-relaxed">
-                AI-generated developer evaluations with strengths, improvements, and action plans.
+                Performance grades, AI code detection, and growth tracking alongside automation metrics.
               </p>
             </div>
           </div>
@@ -231,55 +238,66 @@ export default function ProductPage() {
       <section className="py-20 bg-white">
         <div className="container mx-auto px-6">
           <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-primary mb-4">How It Works</h2>
+            <h2 className="text-4xl font-bold text-primary mb-4">The Automation Flow</h2>
             <p className="text-xl text-secondary max-w-2xl mx-auto">
-              Get started in minutes, not days
+              From PRD to production without touching a keyboard
             </p>
           </div>
 
-          <div className="max-w-5xl mx-auto">
-            <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
+          <div className="max-w-6xl mx-auto">
+            <div className="grid grid-cols-1 md:grid-cols-5 gap-6">
               {/* Step 1 */}
               <div className="text-center">
-                <div className="w-16 h-16 bg-accent text-white rounded-full flex items-center justify-center mx-auto mb-6">
-                  <LinkIcon className="w-7 h-7" />
+                <div className="w-16 h-16 bg-accent text-white rounded-full flex items-center justify-center mx-auto mb-6 shadow-lg">
+                  <FileText className="w-7 h-7" />
                 </div>
-                <h3 className="text-xl font-bold text-primary mb-3">Connect</h3>
-                <p className="text-gray-700">
-                  Link your GitHub, GitLab, and Jira accounts with secure OAuth.
+                <h3 className="text-xl font-bold text-primary mb-3">1. Submit PRD</h3>
+                <p className="text-gray-700 text-sm">
+                  Product team submits PRD via MCP-connected tools
                 </p>
               </div>
 
               {/* Step 2 */}
               <div className="text-center">
-                <div className="w-16 h-16 bg-accent text-white rounded-full flex items-center justify-center mx-auto mb-6">
-                  <RefreshCw className="w-7 h-7" />
+                <div className="w-16 h-16 bg-accent text-white rounded-full flex items-center justify-center mx-auto mb-6 shadow-lg">
+                  <Bot className="w-7 h-7" />
                 </div>
-                <h3 className="text-xl font-bold text-primary mb-3">Sync</h3>
-                <p className="text-gray-700">
-                  Automatic data import with AI analysis of commits and tickets.
+                <h3 className="text-xl font-bold text-primary mb-3">2. AI Generates</h3>
+                <p className="text-gray-700 text-sm">
+                  AI creates structured tickets with full context automatically
                 </p>
               </div>
 
               {/* Step 3 */}
               <div className="text-center">
-                <div className="w-16 h-16 bg-accent text-white rounded-full flex items-center justify-center mx-auto mb-6">
-                  <Search className="w-7 h-7" />
+                <div className="w-16 h-16 bg-secondary text-white rounded-full flex items-center justify-center mx-auto mb-6 shadow-lg">
+                  <Target className="w-7 h-7" />
                 </div>
-                <h3 className="text-xl font-bold text-primary mb-3">Ask</h3>
-                <p className="text-gray-700">
-                  Query your data with natural language through AI Chat.
+                <h3 className="text-xl font-bold text-primary mb-3">3. AI Evaluates</h3>
+                <p className="text-gray-700 text-sm">
+                  Quality scored 1-10, low-quality tickets auto-rejected
                 </p>
               </div>
 
               {/* Step 4 */}
               <div className="text-center">
-                <div className="w-16 h-16 bg-accent text-white rounded-full flex items-center justify-center mx-auto mb-6">
+                <div className="w-16 h-16 bg-secondary text-white rounded-full flex items-center justify-center mx-auto mb-6 shadow-lg">
+                  <MessageSquare className="w-7 h-7" />
+                </div>
+                <h3 className="text-xl font-bold text-primary mb-3">4. Smart Route</h3>
+                <p className="text-gray-700 text-sm">
+                  Tickets sent to developers via Slack with context
+                </p>
+              </div>
+
+              {/* Step 5 */}
+              <div className="text-center">
+                <div className="w-16 h-16 bg-green-500 text-white rounded-full flex items-center justify-center mx-auto mb-6 shadow-lg">
                   <Zap className="w-7 h-7" />
                 </div>
-                <h3 className="text-xl font-bold text-primary mb-3">Optimize</h3>
-                <p className="text-gray-700">
-                  Get actionable insights and track improvements over time.
+                <h3 className="text-xl font-bold text-primary mb-3">5. Auto Code</h3>
+                <p className="text-gray-700 text-sm">
+                  AI implements, tests, and creates PR for QA review
                 </p>
               </div>
             </div>
@@ -294,12 +312,12 @@ export default function ProductPage() {
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
               <div>
                 <h2 className="text-4xl font-bold text-primary mb-6">
-                  Built for Modern Engineering Teams
+                  The Future of Engineering is Automated
                 </h2>
                 <p className="text-lg text-gray-700 mb-8 leading-relaxed">
-                  Whether you&apos;re a 5-person startup or a 500-person enterprise, idweo scales
-                  with you. Our AI-powered platform adapts to your workflow, not the other way
-                  around.
+                  Stop wasting time on manual ticket creation, routing, and follow-ups. Let AI handle
+                  the entire workflow from PRD to production while your team focuses on what matters:
+                  building great products.
                 </p>
 
                 <div className="space-y-4">
@@ -308,31 +326,31 @@ export default function ProductPage() {
                       <Zap className="w-5 h-5 text-accent" />
                     </div>
                     <div>
-                      <h3 className="font-semibold text-primary mb-1">Real-Time AI Streaming</h3>
+                      <h3 className="font-semibold text-primary mb-1">100% Automated Pipeline</h3>
                       <p className="text-gray-700">
-                        Watch the AI think and respond in real-time
+                        Zero manual work from PRD intake to QA handoff
                       </p>
                     </div>
                   </div>
 
                   <div className="flex items-start space-x-4">
                     <div className="w-10 h-10 bg-accent/10 rounded-lg flex items-center justify-center flex-shrink-0">
-                      <Shield className="w-5 h-5 text-accent" />
+                      <Bot className="w-5 h-5 text-accent" />
                     </div>
                     <div>
-                      <h3 className="font-semibold text-primary mb-1">Enterprise Security</h3>
-                      <p className="text-gray-700">AES-256 encryption with secure OAuth</p>
+                      <h3 className="font-semibold text-primary mb-1">AI Quality Gates</h3>
+                      <p className="text-gray-700">Every ticket evaluated before reaching developers</p>
                     </div>
                   </div>
 
                   <div className="flex items-start space-x-4">
                     <div className="w-10 h-10 bg-accent/10 rounded-lg flex items-center justify-center flex-shrink-0">
-                      <Clock className="w-5 h-5 text-accent" />
+                      <LinkIcon className="w-5 h-5 text-accent" />
                     </div>
                     <div>
-                      <h3 className="font-semibold text-primary mb-1">5-Minute Setup</h3>
+                      <h3 className="font-semibold text-primary mb-1">MCP Native</h3>
                       <p className="text-gray-700">
-                        From signup to insights in under 5 minutes
+                        Next-gen protocol integrations with your existing stack
                       </p>
                     </div>
                   </div>
@@ -365,17 +383,17 @@ export default function ProductPage() {
       <section className="py-20 bg-gradient-to-br from-primary to-secondary">
         <div className="container mx-auto px-6 text-center">
           <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-            Ready to Unlock Your Engineering Intelligence?
+            Ready to Automate Your Entire Engineering Workflow?
           </h2>
           <p className="text-xl text-gray-200 mb-10 max-w-2xl mx-auto">
-            Join hundreds of teams using AI to make smarter decisions every day
+            Join teams shipping 80% faster with complete PRD-to-production automation
           </p>
           <div className="flex flex-col sm:flex-row justify-center gap-4">
             <Link
-              href="/get-started"
+              href="/contact"
               className="bg-accent text-white px-10 py-4 rounded-lg font-semibold text-lg hover:bg-opacity-90 transition-all duration-300 shadow-xl hover:shadow-2xl hover:scale-105 inline-flex items-center justify-center space-x-2"
             >
-              <span>Start Free Trial</span>
+              <span>Request Demo</span>
               <svg
                 className="w-5 h-5"
                 fill="none"

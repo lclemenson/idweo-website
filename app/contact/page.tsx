@@ -72,21 +72,7 @@ export default function ContactPage() {
                       </div>
                     </div>
 
-                    <div className="flex items-start space-x-4">
-                      <div className="w-12 h-12 bg-accent/10 rounded-lg flex items-center justify-center flex-shrink-0">
-                        <Phone className="w-6 h-6 text-accent" />
-                      </div>
-                      <div>
-                        <h3 className="font-semibold text-primary mb-1">Phone</h3>
-                        <a
-                          href="tel:+1234567890"
-                          className="text-gray-700 hover:text-accent transition-colors"
-                        >
-                          +1 (234) 567-890
-                        </a>
-                        <p className="text-sm text-gray-500 mt-1">Mon-Fri, 9am-6pm PST</p>
-                      </div>
-                    </div>
+          
 
                     <div className="flex items-start space-x-4">
                       <div className="w-12 h-12 bg-accent/10 rounded-lg flex items-center justify-center flex-shrink-0">
@@ -95,11 +81,7 @@ export default function ContactPage() {
                       <div>
                         <h3 className="font-semibold text-primary mb-1">Office</h3>
                         <p className="text-gray-700">
-                          123 Tech Street
-                          <br />
-                          San Francisco, CA 94105
-                          <br />
-                          United States
+                          London, UK
                         </p>
                       </div>
                     </div>
@@ -120,7 +102,7 @@ export default function ContactPage() {
                   </div>
                 </div>
 
-                {/* Social Links */}
+                {/* Social Links
                 <div>
                   <h3 className="text-lg font-semibold text-primary mb-4">Follow Us</h3>
                   <div className="flex space-x-4">
@@ -149,18 +131,12 @@ export default function ContactPage() {
                       <Github className="w-5 h-5" />
                     </a>
                   </div>
-                </div>
+                </div> */}
 
                 {/* Quick Links */}
                 <div className="bg-gradient-to-br from-accent/10 to-secondary/10 rounded-lg p-6">
                   <h3 className="text-lg font-semibold text-primary mb-4">Quick Support</h3>
                   <div className="space-y-3">
-                    <Link
-                      href="/pricing"
-                      className="block text-gray-700 hover:text-accent transition-colors"
-                    >
-                      → Pricing
-                    </Link>
                     <Link
                       href="/product"
                       className="block text-gray-700 hover:text-accent transition-colors"
@@ -187,15 +163,15 @@ export default function ContactPage() {
       {/* CTA Section */}
       <section className="py-20 bg-gradient-to-br from-primary to-secondary">
         <div className="container mx-auto px-6 text-center">
-          <h2 className="text-4xl font-bold text-white mb-6">Prefer to Start Right Away?</h2>
+          <h2 className="text-4xl font-bold text-white mb-6">Explore Our Platform</h2>
           <p className="text-xl text-gray-200 mb-10 max-w-2xl mx-auto">
-            Skip the wait and start your free trial in under 5 minutes
+            Learn more about how idweo can transform your engineering intelligence
           </p>
           <Link
-            href="/get-started"
+            href="/product"
             className="bg-accent text-white px-10 py-4 rounded-lg font-semibold text-lg hover:bg-opacity-90 transition-all duration-300 shadow-xl hover:shadow-2xl hover:scale-105 inline-flex items-center space-x-2"
           >
-            <span>Start Free Trial</span>
+            <span>See All Features</span>
             <svg
               className="w-5 h-5"
               fill="none"

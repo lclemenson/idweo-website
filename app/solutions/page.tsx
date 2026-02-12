@@ -19,18 +19,18 @@ import {
 } from 'lucide-react';
 
 export const metadata: Metadata = {
-  title: 'Solutions - AI Engineering Intelligence for Every Role',
+  title: 'Solutions - Complete Engineering Automation for Every Role',
   description:
-    'AI-powered engineering intelligence solutions tailored for CEOs, CTOs, Engineering Managers, Product Owners, and Developers. Get role-specific insights, performance analytics, and AI usage tracking.',
+    'Automated PRD-to-production workflows tailored for CEOs, CTOs, Product Owners, and Developers. AI ticket generation, quality evaluation, smart routing, and autonomous coding for every role.',
   keywords: [
-    'AI engineering solutions',
-    'CEO engineering analytics',
-    'CTO developer performance',
-    'engineering manager tools',
-    'product owner estimation',
-    'developer growth tracking',
-    'AI code detection',
-    'engineering intelligence',
+    'engineering automation solutions',
+    'automated ticket routing',
+    'PRD automation',
+    'AI code generation',
+    'developer workflow automation',
+    'product owner automation',
+    'engineering pipeline automation',
+    'MCP integrations',
   ],
 };
 
@@ -56,23 +56,23 @@ export default function SolutionsPage() {
           </div>
 
           <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold text-white mb-6 leading-tight">
-            The Right AI Insights
+            Complete Automation
             <br />
             <span className="text-accent">For Every Role</span>
           </h1>
 
           <p className="text-xl md:text-2xl text-gray-200 mb-10 max-w-3xl mx-auto leading-relaxed">
-            From the boardroom to the codebase, idweo delivers tailored intelligence
-            that helps every stakeholder make smarter, data-driven decisions.
+            From PRD to production, every role benefits from intelligent automation
+            that eliminates manual work and accelerates delivery.
           </p>
 
           <div className="flex flex-col sm:flex-row justify-center gap-4">
             <Link
-              href="/get-started"
+              href="/contact"
               className="bg-accent text-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-opacity-90 transition-all duration-300 shadow-xl hover:shadow-2xl hover:scale-105 flex items-center justify-center space-x-2"
             >
               <Zap className="w-5 h-5" />
-              <span>Start Free Trial</span>
+              <span>Request Demo</span>
             </Link>
             <Link
               href="/product"
@@ -100,32 +100,31 @@ export default function SolutionsPage() {
                   CEOs &amp; Business Units
                 </h2>
                 <p className="text-lg text-gray-700 mb-8 leading-relaxed">
-                  Get high-level visibility into engineering output, AI tool ROI, and team
-                  performance without diving into technical details. Ask questions in plain
-                  English and receive executive-ready summaries.
+                  See exactly how automation is accelerating delivery. Track PRD-to-production velocity,
+                  automation ROI, and team efficiency in real-time dashboards designed for executives.
                 </p>
 
                 <div className="space-y-4 mb-8">
                   <div className="flex items-start space-x-4">
                     <div className="w-10 h-10 bg-accent/10 rounded-lg flex items-center justify-center flex-shrink-0">
-                      <MessageSquare className="w-5 h-5 text-accent" />
+                      <Zap className="w-5 h-5 text-accent" />
                     </div>
                     <div>
-                      <h3 className="font-semibold text-primary mb-1">AI Chat</h3>
+                      <h3 className="font-semibold text-primary mb-1">100% Automation Visibility</h3>
                       <p className="text-gray-600 text-sm">
-                        Ask questions about team performance in natural language
+                        Track every PRD from intake to production deployment
                       </p>
                     </div>
                   </div>
 
                   <div className="flex items-start space-x-4">
                     <div className="w-10 h-10 bg-accent/10 rounded-lg flex items-center justify-center flex-shrink-0">
-                      <Bot className="w-5 h-5 text-accent" />
+                      <TrendingUp className="w-5 h-5 text-accent" />
                     </div>
                     <div>
-                      <h3 className="font-semibold text-primary mb-1">AI Usage Cost Tracking</h3>
+                      <h3 className="font-semibold text-primary mb-1">Automation ROI Tracking</h3>
                       <p className="text-gray-600 text-sm">
-                        Understand the ROI of AI coding tools across your organization
+                        Measure time saved and velocity improvements from automation
                       </p>
                     </div>
                   </div>
@@ -135,16 +134,16 @@ export default function SolutionsPage() {
                       <FileText className="w-5 h-5 text-accent" />
                     </div>
                     <div>
-                      <h3 className="font-semibold text-primary mb-1">Executive Summaries</h3>
+                      <h3 className="font-semibold text-primary mb-1">Executive Automation Reports</h3>
                       <p className="text-gray-600 text-sm">
-                        AI-generated reports with actionable insights for leadership
+                        AI-generated summaries of pipeline health and delivery velocity
                       </p>
                     </div>
                   </div>
                 </div>
 
                 <Link
-                  href="/get-started"
+                  href="/contact"
                   className="inline-flex items-center text-accent font-semibold hover:text-primary transition-colors"
                 >
                   Get started as a leader
@@ -267,32 +266,32 @@ export default function SolutionsPage() {
                   CTOs &amp; Engineering Managers
                 </h2>
                 <p className="text-lg text-gray-700 mb-8 leading-relaxed">
-                  Deep analytics on developer performance, code quality, and AI adoption.
-                  Identify top performers, detect bottlenecks, and track engineering health
-                  with granular, data-driven metrics.
+                  Manage automated ticket routing, monitor quality gates, and track team performance
+                  all from one platform. See exactly which tickets are being auto-processed and where
+                  human intervention is needed.
                 </p>
 
                 <div className="space-y-4 mb-8">
                   <div className="flex items-start space-x-4">
                     <div className="w-10 h-10 bg-secondary/10 rounded-lg flex items-center justify-center flex-shrink-0">
-                      <BarChart3 className="w-5 h-5 text-secondary" />
+                      <Zap className="w-5 h-5 text-secondary" />
                     </div>
                     <div>
-                      <h3 className="font-semibold text-primary mb-1">Performance Grades (A-F)</h3>
+                      <h3 className="font-semibold text-primary mb-1">Automated Ticket Routing</h3>
                       <p className="text-gray-600 text-sm">
-                        Automatic grading based on commit quality, complexity, and impact
+                        AI routes quality-checked tickets to developers via Slack automatically
                       </p>
                     </div>
                   </div>
 
                   <div className="flex items-start space-x-4">
                     <div className="w-10 h-10 bg-secondary/10 rounded-lg flex items-center justify-center flex-shrink-0">
-                      <Bot className="w-5 h-5 text-secondary" />
+                      <Target className="w-5 h-5 text-secondary" />
                     </div>
                     <div>
-                      <h3 className="font-semibold text-primary mb-1">AI Code Detection</h3>
+                      <h3 className="font-semibold text-primary mb-1">Quality Gate Analytics</h3>
                       <p className="text-gray-600 text-sm">
-                        Detect Copilot and Cursor usage with confidence scoring
+                        Track ticket quality scores and rejection rates for continuous improvement
                       </p>
                     </div>
                   </div>
@@ -302,16 +301,16 @@ export default function SolutionsPage() {
                       <TrendingUp className="w-5 h-5 text-secondary" />
                     </div>
                     <div>
-                      <h3 className="font-semibold text-primary mb-1">Monthly Trends</h3>
+                      <h3 className="font-semibold text-primary mb-1">Pipeline Health Monitoring</h3>
                       <p className="text-gray-600 text-sm">
-                        Track performance velocity, commit trends, and overtime patterns
+                        Real-time visibility into automation pipeline and developer throughput
                       </p>
                     </div>
                   </div>
                 </div>
 
                 <Link
-                  href="/get-started"
+                  href="/contact"
                   className="inline-flex items-center text-secondary font-semibold hover:text-primary transition-colors"
                 >
                   Get started as an engineering leader
@@ -337,9 +336,9 @@ export default function SolutionsPage() {
                   Product Owners
                 </h2>
                 <p className="text-lg text-gray-700 mb-8 leading-relaxed">
-                  AI-powered estimation and ticket quality analysis for better sprint planning.
-                  Stop guessing story points and start making data-driven decisions about
-                  capacity and delivery timelines.
+                  Turn PRDs into implementable tickets automatically. AI generates structured tickets,
+                  evaluates quality, and routes them to developers without any manual intervention.
+                  Focus on product strategy, not ticket administration.
                 </p>
 
                 <div className="space-y-4 mb-8">
@@ -348,9 +347,9 @@ export default function SolutionsPage() {
                       <Sparkles className="w-5 h-5 text-accent" />
                     </div>
                     <div>
-                      <h3 className="font-semibold text-primary mb-1">Magic Estimates</h3>
+                      <h3 className="font-semibold text-primary mb-1">Automated PRD Processing</h3>
                       <p className="text-gray-600 text-sm">
-                        AI-generated story point estimates based on historical team data
+                        AI converts PRDs into structured, developer-ready tickets automatically
                       </p>
                     </div>
                   </div>
@@ -360,28 +359,28 @@ export default function SolutionsPage() {
                       <Target className="w-5 h-5 text-accent" />
                     </div>
                     <div>
-                      <h3 className="font-semibold text-primary mb-1">Ticket Quality (1-10)</h3>
+                      <h3 className="font-semibold text-primary mb-1">Quality Gates (1-10)</h3>
                       <p className="text-gray-600 text-sm">
-                        Automated scoring of ticket completeness and clarity
+                        Every ticket scored for completeness before reaching developers
                       </p>
                     </div>
                   </div>
 
                   <div className="flex items-start space-x-4">
                     <div className="w-10 h-10 bg-accent/10 rounded-lg flex items-center justify-center flex-shrink-0">
-                      <Users className="w-5 h-5 text-accent" />
+                      <MessageSquare className="w-5 h-5 text-accent" />
                     </div>
                     <div>
-                      <h3 className="font-semibold text-primary mb-1">Sprint Capacity</h3>
+                      <h3 className="font-semibold text-primary mb-1">Real-Time Pipeline Tracking</h3>
                       <p className="text-gray-600 text-sm">
-                        Plan sprints with accurate capacity forecasts and velocity data
+                        Track every PRD from submission to production in real-time
                       </p>
                     </div>
                   </div>
                 </div>
 
                 <Link
-                  href="/get-started"
+                  href="/contact"
                   className="inline-flex items-center text-accent font-semibold hover:text-primary transition-colors"
                 >
                   Get started as a product owner
@@ -521,20 +520,32 @@ export default function SolutionsPage() {
                   Developers
                 </h2>
                 <p className="text-lg text-gray-700 mb-8 leading-relaxed">
-                  Private, personalized growth insights and AI-generated reports. Track your
-                  own performance, understand your AI tool usage, and get actionable
-                  recommendations to level up your skills.
+                  Receive quality-assured tickets directly in Slack with full context and AI-generated
+                  implementation guidance. Focus on building features, not hunting for requirements
+                  or clarifying vague tickets.
                 </p>
 
                 <div className="space-y-4 mb-8">
                   <div className="flex items-start space-x-4">
                     <div className="w-10 h-10 bg-secondary/10 rounded-lg flex items-center justify-center flex-shrink-0">
-                      <BarChart3 className="w-5 h-5 text-secondary" />
+                      <MessageSquare className="w-5 h-5 text-secondary" />
                     </div>
                     <div>
-                      <h3 className="font-semibold text-primary mb-1">Private Grades &amp; Trends</h3>
+                      <h3 className="font-semibold text-primary mb-1">Smart Slack Delivery</h3>
                       <p className="text-gray-600 text-sm">
-                        See your own performance grades and track improvement over time
+                        Tickets routed directly to you with context and implementation guidance
+                      </p>
+                    </div>
+                  </div>
+
+                  <div className="flex items-start space-x-4">
+                    <div className="w-10 h-10 bg-secondary/10 rounded-lg flex items-center justify-center flex-shrink-0">
+                      <Target className="w-5 h-5 text-secondary" />
+                    </div>
+                    <div>
+                      <h3 className="font-semibold text-primary mb-1">Quality-Assured Tickets Only</h3>
+                      <p className="text-gray-600 text-sm">
+                        Only tickets scoring 7+ reach you - no more vague requirements
                       </p>
                     </div>
                   </div>
@@ -544,28 +555,16 @@ export default function SolutionsPage() {
                       <Bot className="w-5 h-5 text-secondary" />
                     </div>
                     <div>
-                      <h3 className="font-semibold text-primary mb-1">AI Usage Tracking</h3>
+                      <h3 className="font-semibold text-primary mb-1">AI Implementation Context</h3>
                       <p className="text-gray-600 text-sm">
-                        Understand how much of your code is AI-assisted and optimize your workflow
-                      </p>
-                    </div>
-                  </div>
-
-                  <div className="flex items-start space-x-4">
-                    <div className="w-10 h-10 bg-secondary/10 rounded-lg flex items-center justify-center flex-shrink-0">
-                      <Lightbulb className="w-5 h-5 text-secondary" />
-                    </div>
-                    <div>
-                      <h3 className="font-semibold text-primary mb-1">Growth Reports</h3>
-                      <p className="text-gray-600 text-sm">
-                        AI-generated insights on skill development and areas for improvement
+                        Every ticket includes AI-generated technical context and approach suggestions
                       </p>
                     </div>
                   </div>
                 </div>
 
                 <Link
-                  href="/get-started"
+                  href="/contact"
                   className="inline-flex items-center text-secondary font-semibold hover:text-primary transition-colors"
                 >
                   Get started as a developer
@@ -582,10 +581,10 @@ export default function SolutionsPage() {
         <div className="container mx-auto px-6">
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold text-primary mb-4">
-              Built for Every Team
+              Powered by Next-Gen Technology
             </h2>
             <p className="text-xl text-secondary max-w-2xl mx-auto">
-              Core capabilities that power every role&apos;s experience
+              Core automation capabilities that drive results for every team
             </p>
           </div>
 
@@ -594,32 +593,32 @@ export default function SolutionsPage() {
               <div className="w-14 h-14 bg-accent/10 rounded-xl flex items-center justify-center mx-auto mb-6">
                 <Zap className="w-7 h-7 text-accent" />
               </div>
-              <h3 className="text-xl font-bold text-primary mb-3">Real-Time AI Streaming</h3>
+              <h3 className="text-xl font-bold text-primary mb-3">100% Automation</h3>
               <p className="text-gray-600 leading-relaxed">
-                Watch the AI think and respond in real-time. Get instant answers to complex
-                engineering questions with streaming responses.
+                Complete PRD-to-production pipeline with zero manual steps. AI handles ticket
+                generation, quality checks, routing, and code implementation.
               </p>
             </div>
 
             <div className="text-center p-8 bg-gray-50 rounded-xl hover:shadow-lg transition-shadow">
               <div className="w-14 h-14 bg-secondary/10 rounded-xl flex items-center justify-center mx-auto mb-6">
-                <Shield className="w-7 h-7 text-secondary" />
+                <LinkIcon className="w-7 h-7 text-secondary" />
               </div>
-              <h3 className="text-xl font-bold text-primary mb-3">Privacy First</h3>
+              <h3 className="text-xl font-bold text-primary mb-3">MCP Native</h3>
               <p className="text-gray-600 leading-relaxed">
-                Your code never leaves your infrastructure. Developer-level data is private
-                by default with role-based access controls.
+                Next-generation protocol integrations with GitHub, Slack, and Bootstack.
+                Seamless data flow across your entire toolchain.
               </p>
             </div>
 
             <div className="text-center p-8 bg-gray-50 rounded-xl hover:shadow-lg transition-shadow">
               <div className="w-14 h-14 bg-accent/10 rounded-xl flex items-center justify-center mx-auto mb-6">
-                <GitBranch className="w-7 h-7 text-accent" />
+                <Target className="w-7 h-7 text-accent" />
               </div>
-              <h3 className="text-xl font-bold text-primary mb-3">Easy Integration</h3>
+              <h3 className="text-xl font-bold text-primary mb-3">AI Quality Gates</h3>
               <p className="text-gray-600 leading-relaxed">
-                Connect GitHub and Jira in minutes. No complex setup required. Start getting
-                insights from day one with zero configuration.
+                Every ticket evaluated for quality before reaching developers. Low-quality
+                tickets auto-rejected with actionable feedback.
               </p>
             </div>
           </div>
@@ -630,18 +629,18 @@ export default function SolutionsPage() {
       <section className="py-20 bg-gradient-to-br from-primary to-secondary">
         <div className="container mx-auto px-6 text-center">
           <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-            Find Your AI-Powered Solution
+            Ready to Automate Your Engineering Workflow?
           </h2>
           <p className="text-xl text-gray-200 mb-10 max-w-2xl mx-auto">
-            Whether you&apos;re leading a company or writing code, idweo has the
-            intelligence you need to make better decisions every day.
+            Whether you&apos;re in the boardroom or the codebase, automation accelerates
+            every role from PRD to production.
           </p>
           <div className="flex flex-col sm:flex-row justify-center gap-4">
             <Link
-              href="/get-started"
+              href="/contact"
               className="bg-accent text-white px-10 py-4 rounded-lg font-semibold text-lg hover:bg-opacity-90 transition-all duration-300 shadow-xl hover:shadow-2xl hover:scale-105 inline-flex items-center justify-center space-x-2"
             >
-              <span>Start Free Trial</span>
+              <span>Request Demo</span>
               <ArrowRight className="w-5 h-5" />
             </Link>
             <Link

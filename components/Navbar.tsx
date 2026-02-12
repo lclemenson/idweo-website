@@ -54,14 +54,6 @@ export const Navbar = () => {
               Solutions
             </Link>
             <Link
-              href="/pricing"
-              className={`font-medium transition-colors duration-300 ${
-                scrolled ? 'text-white hover:text-accent' : 'text-primary hover:text-secondary'
-              }`}
-            >
-              Pricing
-            </Link>
-            <Link
               href="/contact"
               className={`font-medium transition-colors duration-300 ${
                 scrolled ? 'text-white hover:text-accent' : 'text-primary hover:text-secondary'
@@ -70,12 +62,12 @@ export const Navbar = () => {
               Contact
             </Link>
 
-            {/* Get Started CTA */}
+            {/* Request Demo CTA */}
             <Link
-              href="/get-started"
+              href="/contact"
               className="bg-accent text-white px-6 py-2.5 rounded-lg font-semibold hover:bg-opacity-90 transition-all duration-300 shadow-md hover:shadow-lg"
             >
-              Get Started
+              Request Demo
             </Link>
           </nav>
 
@@ -114,15 +106,6 @@ export const Navbar = () => {
                 Solutions
               </Link>
               <Link
-                href="/pricing"
-                onClick={toggleMobileMenu}
-                className={`font-medium transition-colors duration-300 ${
-                  scrolled ? 'text-white hover:text-accent' : 'text-primary hover:text-secondary'
-                }`}
-              >
-                Pricing
-              </Link>
-              <Link
                 href="/contact"
                 onClick={toggleMobileMenu}
                 className={`font-medium transition-colors duration-300 ${
@@ -132,11 +115,11 @@ export const Navbar = () => {
                 Contact
               </Link>
               <Link
-                href="/get-started"
+                href="/contact"
                 onClick={toggleMobileMenu}
                 className="bg-accent text-white px-6 py-2.5 rounded-lg font-semibold hover:bg-opacity-90 transition-all duration-300 shadow-md hover:shadow-lg text-center"
               >
-                Get Started
+                Request Demo
               </Link>
             </div>
           </div>

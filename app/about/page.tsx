@@ -3,16 +3,17 @@ import Link from 'next/link';
 import { Target, Heart, Zap, Users, Award, TrendingUp } from 'lucide-react';
 
 export const metadata: Metadata = {
-  title: 'About Us - Engineering Intelligence Platform',
+  title: 'About Us - Engineering Automation Platform',
   description:
-    'Learn about idweo\'s mission to transform engineering teams with actionable intelligence. We believe in empowering developers, not surveilling them.',
+    'Learn about idweo\'s mission to fully automate engineering workflows from PRD to production. We believe in empowering teams through intelligent automation, not manual processes.',
   keywords: [
     'about idweo',
-    'engineering intelligence',
-    'developer analytics',
-    'engineering platform',
-    'team performance',
-    'AI engineering',
+    'engineering automation',
+    'PRD automation',
+    'automated workflows',
+    'AI engineering platform',
+    'developer automation',
+    'MCP integrations',
   ],
 };
 
@@ -38,14 +39,14 @@ export default function AboutPage() {
           </div>
 
           <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold text-white mb-6 leading-tight">
-            Engineering Intelligence
+            Engineering Automation
             <br />
-            <span className="text-accent">That Actually Works</span>
+            <span className="text-accent">That Actually Ships</span>
           </h1>
 
           <p className="text-xl md:text-2xl text-gray-200 mb-8 max-w-3xl mx-auto leading-relaxed">
-            We&apos;re building the platform that turns raw engineering data into decisions
-            that matter &mdash; without micromanaging your team.
+            We&apos;re building the platform that eliminates manual work from PRD to production
+            &mdash; so your team can focus on building, not administering.
           </p>
         </div>
       </section>
@@ -62,21 +63,22 @@ export default function AboutPage() {
 
             <div className="space-y-6 text-lg text-gray-700 leading-relaxed">
               <p>
-                idweo was born from a simple frustration: engineering leaders were drowning in data
-                but starving for insight. Dashboards overflowed with charts, yet the questions that
-                mattered most &mdash; <em>Who needs support? Where are the bottlenecks? Is our
-                investment in AI tooling paying off?</em> &mdash; remained unanswered.
+                idweo started from a simple observation: engineering teams were spending more time
+                on process than progress. PRDs sat in backlogs waiting to become tickets. Tickets
+                waited for manual routing. Developers waited for clarity. Everyone waited for someone
+                else to do the manual work.
               </p>
               <p>
                 Our founding team spent years leading engineering organizations across startups and
-                enterprises. We saw the same pattern everywhere: brilliant engineers doing incredible
-                work that was invisible to leadership, and managers making resourcing decisions based
-                on gut feel rather than evidence.
+                enterprises. We saw the same pattern everywhere: brilliant engineers bogged down by
+                administrative overhead, product managers drowning in ticket creation, and engineering
+                leaders unable to see where the bottlenecks actually were.
               </p>
               <p>
-                We built idweo to close that gap. By combining data from GitHub, Jira, and your
-                existing toolchain with purpose-built AI, we created a platform that surfaces what
-                actually matters &mdash; the intelligence behind the activity.
+                We built idweo to eliminate that friction entirely. By combining MCP integrations with
+                purpose-built AI, we created the first platform that automates the complete workflow
+                from PRD to production &mdash; ticket generation, quality evaluation, smart routing,
+                and autonomous code implementation. Zero manual intervention required.
               </p>
             </div>
           </div>
@@ -101,9 +103,9 @@ export default function AboutPage() {
               </div>
               <h3 className="text-2xl font-bold text-primary mb-4">Our Mission</h3>
               <p className="text-gray-600 leading-relaxed">
-                To give every engineering leader the clarity to make confident decisions, and every
-                developer the visibility to grow &mdash; powered by AI that understands how software
-                is really built.
+                To eliminate all manual work from the engineering pipeline, empowering teams to ship
+                faster through complete automation &mdash; from PRD intake to production deployment,
+                powered by AI that understands how software is really built.
               </p>
             </div>
 
@@ -114,9 +116,9 @@ export default function AboutPage() {
               </div>
               <h3 className="text-2xl font-bold text-primary mb-4">Our Vision</h3>
               <p className="text-gray-600 leading-relaxed">
-                A world where engineering teams operate with full transparency &mdash; where
-                performance is understood, not assumed, and where data replaces politics in
-                every technical decision.
+                A world where engineering teams ship at the speed of thought &mdash; where AI handles
+                all the process overhead, where manual ticket creation is obsolete, and where every
+                PRD becomes production code automatically.
               </p>
             </div>
 
@@ -127,9 +129,9 @@ export default function AboutPage() {
               </div>
               <h3 className="text-2xl font-bold text-primary mb-4">Our Values</h3>
               <p className="text-gray-600 leading-relaxed">
-                We champion developer privacy, build with radical honesty, ship with urgency,
-                and measure ourselves by the outcomes our customers achieve &mdash; not the
-                features we release.
+                We champion automation over administration, quality over quantity, outcomes over
+                activity. We build with radical honesty, ship with urgency, and measure ourselves
+                by the hours our customers save &mdash; not the features we release.
               </p>
             </div>
           </div>
@@ -153,11 +155,10 @@ export default function AboutPage() {
                 <Zap className="w-6 h-6 text-accent group-hover:text-white" />
               </div>
               <div>
-                <h3 className="text-xl font-bold text-primary mb-2">Intelligence Over Activity</h3>
+                <h3 className="text-xl font-bold text-primary mb-2">Automation Over Administration</h3>
                 <p className="text-gray-600 leading-relaxed">
-                  Lines of code and commit counts tell you nothing. We focus on impact, complexity,
-                  and quality &mdash; the signals that reveal what&apos;s really happening in your
-                  codebase.
+                  Manual ticket creation, routing, and follow-ups are waste. We automate every step
+                  from PRD to production so teams can focus on building, not administering.
                 </p>
               </div>
             </div>
@@ -168,10 +169,10 @@ export default function AboutPage() {
                 <Users className="w-6 h-6 text-secondary group-hover:text-white" />
               </div>
               <div>
-                <h3 className="text-xl font-bold text-primary mb-2">People Over Processes</h3>
+                <h3 className="text-xl font-bold text-primary mb-2">Quality Over Quantity</h3>
                 <p className="text-gray-600 leading-relaxed">
-                  Great software is built by empowered people, not rigid workflows. Our platform
-                  helps you support your developers as individuals, not interchangeable resources.
+                  Not every ticket deserves to reach developers. AI quality gates ensure only
+                  well-defined, implementable tickets make it through, protecting developer focus.
                 </p>
               </div>
             </div>
@@ -182,10 +183,10 @@ export default function AboutPage() {
                 <Award className="w-6 h-6 text-accent group-hover:text-white" />
               </div>
               <div>
-                <h3 className="text-xl font-bold text-primary mb-2">Impact Over Effort</h3>
+                <h3 className="text-xl font-bold text-primary mb-2">Velocity Over Vanity Metrics</h3>
                 <p className="text-gray-600 leading-relaxed">
-                  Working long hours doesn&apos;t mean working effectively. We measure outcomes and
-                  value delivered, not hours logged or tickets closed.
+                  We don&apos;t count tickets or track hours. We measure what matters: time from PRD
+                  to production, automation success rate, and actual code shipped.
                 </p>
               </div>
             </div>
@@ -196,10 +197,10 @@ export default function AboutPage() {
                 <Heart className="w-6 h-6 text-secondary group-hover:text-white" />
               </div>
               <div>
-                <h3 className="text-xl font-bold text-primary mb-2">Privacy First Always</h3>
+                <h3 className="text-xl font-bold text-primary mb-2">AI-First Engineering</h3>
                 <p className="text-gray-600 leading-relaxed">
-                  Developer trust is non-negotiable. Individual data stays private by default,
-                  and our platform is designed for empowerment &mdash; never surveillance.
+                  The future isn&apos;t AI assisting humans &mdash; it&apos;s AI autonomously handling
+                  entire workflows while humans focus on strategy and creativity.
                 </p>
               </div>
             </div>
@@ -257,18 +258,18 @@ export default function AboutPage() {
       <section className="py-20 bg-gradient-to-br from-primary to-secondary">
         <div className="container mx-auto px-6 text-center">
           <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-            Join the Intelligence Revolution
+            Join the Automation Revolution
           </h2>
           <p className="text-xl text-gray-200 mb-10 max-w-2xl mx-auto">
-            Stop guessing and start knowing. See what engineering intelligence can do for your team.
+            Stop managing workflows and start shipping code. See what complete automation can do for your team.
           </p>
           <div className="flex flex-col sm:flex-row justify-center gap-4">
             <Link
-              href="/get-started"
+              href="/contact"
               className="bg-accent text-white px-10 py-4 rounded-lg font-semibold text-lg hover:bg-opacity-90 transition-all duration-300 shadow-xl hover:shadow-2xl hover:scale-105 inline-flex items-center justify-center space-x-2"
             >
               <Zap className="w-5 h-5" />
-              <span>Get Started Free</span>
+              <span>Request Demo</span>
             </Link>
             <Link
               href="/product"
