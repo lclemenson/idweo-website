@@ -243,7 +243,7 @@ export default function ProductPage() {
                 auto-rejected with improvement feedback.
               </p>
               <div className="flex items-center space-x-2">
-                <span className="bg-green-100 text-green-700 px-2 py-1 rounded text-sm font-bold">
+                <span className="bg-accent/10 text-accent px-2 py-1 rounded text-sm font-bold">
                   8.5/10
                 </span>
                 <span className="text-sm text-gray-500">Quality Score</span>
@@ -270,8 +270,8 @@ export default function ProductPage() {
 
             {/* Feature 5 - Auto Code Generation (NEW & HIGH) */}
             <div className="group bg-white border border-gray-200 rounded-lg p-6 hover:shadow-xl hover:border-accent transition-all duration-300 hover:-translate-y-1">
-              <div className="w-12 h-12 bg-green-100 rounded-lg flex items-center justify-center mb-4 group-hover:bg-green-500 group-hover:scale-110 transition-all duration-300">
-                <Bot className="w-6 h-6 text-green-600 group-hover:text-white" />
+              <div className="w-12 h-12 bg-accent/10 rounded-lg flex items-center justify-center mb-4 group-hover:bg-accent group-hover:scale-110 transition-all duration-300">
+                <Bot className="w-6 h-6 text-accent group-hover:text-white" />
               </div>
               <h3 className="text-lg font-bold text-primary mb-2">Autonomous Coding</h3>
               <p className="text-gray-700 text-sm leading-relaxed">
@@ -389,7 +389,7 @@ export default function ProductPage() {
 
               {/* Step 5 */}
               <div className="text-center">
-                <div className="w-16 h-16 bg-green-500 text-white rounded-full flex items-center justify-center mx-auto mb-6 shadow-lg">
+                <div className="w-16 h-16 bg-accent text-white rounded-full flex items-center justify-center mx-auto mb-6 shadow-lg">
                   <Zap className="w-7 h-7" />
                 </div>
                 <h3 className="text-xl font-bold text-primary mb-3">5. Auto Code</h3>

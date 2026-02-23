@@ -235,7 +235,7 @@ export default function AutomatedCodingPage() {
                           <span className="text-sm font-medium text-primary">PROJ-142</span>
                           <p className="text-xs text-gray-600">Add user avatar upload</p>
                         </div>
-                        <span className="bg-green-100 text-green-700 text-xs px-2 py-1 rounded">3 pts</span>
+                        <span className="bg-accent/10 text-accent text-xs px-2 py-1 rounded">3 pts</span>
                       </div>
                       <div className="flex items-center justify-between p-3 bg-accent/5 rounded-lg border-l-4 border-accent">
                         <div>

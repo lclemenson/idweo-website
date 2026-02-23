@@ -9,7 +9,7 @@ export default {
       colors: {
         primary: '#1B263B',      // Deep Navy
         secondary: '#415A77',    // Slate Blue
-        accent: '#00D47E',       // Mint Green
+        accent: '#2563EB',       // Vibrant Blue
         'dark-brown': '#2C2416', // Dark Chocolate/Charcoal Brown
       },
       fontFamily: {

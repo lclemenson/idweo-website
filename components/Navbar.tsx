@@ -32,7 +32,7 @@ export const Navbar = () => {
         <div className="flex items-center justify-between">
           {/* Logo */}
           <Link href="/" className="flex items-center space-x-2" aria-label="idweo Home">
-            <Image src="/idweo.png" alt="idweo" width={40} height={40} className="h-10 w-auto" />
+            <Image src="/idweo.png" alt="idweo" width={64} height={64} className="h-16 w-auto" />
           </Link>
 
           {/* Navigation Links */}

@@ -194,8 +194,8 @@ export default function HomePage() {
 
               {/* Step 5: Auto Implementation */}
               <div className="relative">
-                <div className="bg-white rounded-xl p-6 shadow-lg hover:shadow-2xl transition-all duration-300 hover:-translate-y-1 border-2 border-green-500">
-                  <div className="w-12 h-12 bg-green-500 text-white rounded-full flex items-center justify-center mx-auto mb-4 font-bold text-lg">
+                <div className="bg-white rounded-xl p-6 shadow-lg hover:shadow-2xl transition-all duration-300 hover:-translate-y-1 border-2 border-accent">
+                  <div className="w-12 h-12 bg-accent text-white rounded-full flex items-center justify-center mx-auto mb-4 font-bold text-lg">
                     5
                   </div>
                   <h3 className="text-lg font-bold text-primary mb-2 text-center">Auto Code</h3>
@@ -228,9 +228,9 @@ export default function HomePage() {
                 </p>
               </div>
 
-              <div className="bg-green-50 rounded-xl p-6 text-center">
-                <div className="w-14 h-14 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <Sparkles className="w-7 h-7 text-green-600" />
+              <div className="bg-accent/5 rounded-xl p-6 text-center">
+                <div className="w-14 h-14 bg-accent/10 rounded-full flex items-center justify-center mx-auto mb-4">
+                  <Sparkles className="w-7 h-7 text-accent" />
                 </div>
                 <h3 className="font-bold text-primary mb-2">MCP Connected</h3>
                 <p className="text-sm text-gray-600">
