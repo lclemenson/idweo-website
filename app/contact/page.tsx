@@ -81,7 +81,8 @@ export default function ContactPage() {
                       <div>
                         <h3 className="font-semibold text-primary mb-1">Office</h3>
                         <p className="text-gray-700">
-                          London, UK
+                          124 City Road<br />
+                          London <br />EC1V 2NX <br />UK
                         </p>
                       </div>
                     </div>
