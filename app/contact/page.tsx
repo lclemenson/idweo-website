@@ -1,7 +1,7 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
-import { Mail, Phone, MapPin, Clock, Linkedin, Twitter, Github } from 'lucide-react';
-import { ContactForm } from '@/components/ContactForm';
+import { Mail, MapPin, Clock } from 'lucide-react';
+import { CalendlyWidget } from '@/components/CalendlyWidget';
 
 export const metadata: Metadata = {
   title: 'Contact Us - Get in Touch',
@@ -154,8 +154,8 @@ export default function ContactPage() {
                 </div>
               </div>
 
-              {/* Contact Form */}
-              <ContactForm />
+              {/* Calendly Widget */}
+              <CalendlyWidget />
             </div>
           </div>
         </div>
