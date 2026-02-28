@@ -11,6 +11,7 @@ const demoTabs = [
     title: 'Ask Questions in Natural Language',
     description:
       'Query your engineering data conversationally. Ask "Who had the most commits last month?" or "What\'s our average ticket quality?" and get instant, accurate answers with real-time streaming responses.',
+    imagePlaceholder: '/chat.png',
   },
   {
     id: 'analytics',
@@ -19,6 +20,7 @@ const demoTabs = [
     title: 'Developer Performance at a Glance',
     description:
       'Track commits, time spent, and performance grades (A-F) for every developer. View monthly trends, identify top performers, and spot areas needing attention with comprehensive analytics dashboards.',
+    imagePlaceholder: '/statistics.png',
   },
   {
     id: 'estimates',
@@ -27,6 +29,7 @@ const demoTabs = [
     title: 'AI-Powered Story Point Estimation',
     description:
       'Let AI analyze your Jira tickets and suggest story points based on complexity, historical data, and ticket quality. Get quality scores and improvement suggestions for better requirement writing.',
+    imagePlaceholder: '/magic-estimate.png',
   },
   {
     id: 'ai-usage',
@@ -35,6 +38,7 @@ const demoTabs = [
     title: 'Detect AI-Assisted Code',
     description:
       'Automatically identify commits that used Copilot, Cursor, or other AI coding assistants. Track AI usage trends across your team with confidence scores and detailed analysis.',
+    imagePlaceholder: '/statistics-developers.png',
   },
 ];
 

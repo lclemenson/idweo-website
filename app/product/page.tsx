@@ -455,20 +455,12 @@ export default function ProductPage() {
               </div>
 
               <div className="relative">
-                <div className="aspect-square bg-gradient-to-br from-accent/20 to-secondary/20 rounded-2xl flex items-center justify-center">
-                  <div className="text-center p-8">
-                    <MessageSquare className="w-24 h-24 text-primary mx-auto mb-6" />
-                    <p className="text-2xl font-bold text-primary">AI Chat Preview</p>
-                    <p className="text-gray-600 mt-2">
-                      Ask anything about your engineering data
-                    </p>
-                    <div className="mt-6 bg-white rounded-lg p-4 shadow-lg text-left max-w-xs mx-auto">
-                      <p className="text-sm text-gray-500 mb-2">Try asking:</p>
-                      <p className="text-sm font-medium text-primary">
-                        &quot;How many commits did the team make this week?&quot;
-                      </p>
-                    </div>
-                  </div>
+                <div className="rounded-2xl overflow-hidden shadow-xl border border-gray-200">
+                  <img
+                    src="/chat.png"
+                    alt="AI Chat Preview"
+                    className="w-full h-full object-cover"
+                  />
                 </div>
               </div>
             </div>
