@@ -82,19 +82,32 @@ export default function PricingPage() {
                       <span className="text-gray-500 ml-2">/developer/month</span>
                     </div>
                     <p className="text-sm text-gray-500 mt-2">
-                      Billed based on number of active developers
+                      Ongoing monthly subscription
                     </p>
                   </div>
 
-                  {/* Pricing Example */}
-                  <div className="bg-accent/5 border border-accent/20 rounded-lg p-4 mb-8">
+                  {/* Setup + Monthly Example */}
+                  <div className="bg-accent/5 border border-accent/20 rounded-lg p-4 mb-4">
                     <div className="flex items-center space-x-2 mb-2">
                       <Calculator className="w-4 h-4 text-accent" />
-                      <span className="text-sm font-semibold text-accent">Pricing Example</span>
+                      <span className="text-sm font-semibold text-accent">Setup Fee (one-time)</span>
+                    </div>
+                    <p className="text-sm text-gray-700 mb-1">
+                      Choose how many months of history to import.
+                    </p>
+                    <p className="text-sm text-gray-700">
+                      10 devs &times; 6 months history:<br />
+                      <span className="font-bold text-primary">10 &times; 20&euro; &times; 6 = 1,200&euro;</span>
+                    </p>
+                  </div>
+                  <div className="bg-accent/5 border border-accent/20 rounded-lg p-4 mb-8">
+                    <div className="flex items-center space-x-2 mb-2">
+                      <TrendingUp className="w-4 h-4 text-accent" />
+                      <span className="text-sm font-semibold text-accent">Then Monthly</span>
                     </div>
                     <p className="text-sm text-gray-700">
-                      10 developers for 6 months:<br />
-                      <span className="font-bold text-primary">10 &times; 20&euro; &times; 6 = 1,200&euro;</span>
+                      10 devs:<br />
+                      <span className="font-bold text-primary">10 &times; 20&euro; = 200&euro;/month</span>
                     </p>
                   </div>
 
@@ -297,9 +310,9 @@ export default function PricingPage() {
                         1
                       </div>
                       <div>
-                        <h4 className="font-semibold text-primary">Per Developer</h4>
+                        <h4 className="font-semibold text-primary">Setup: Import History</h4>
                         <p className="text-sm text-gray-600">
-                          20&euro; per developer per month of data analyzed
+                          Choose how many months of history to import. You pay 20&euro; &times; developers &times; months of history as a one-time setup fee.
                         </p>
                       </div>
                     </div>
@@ -309,9 +322,9 @@ export default function PricingPage() {
                         2
                       </div>
                       <div>
-                        <h4 className="font-semibold text-primary">Historical Data</h4>
+                        <h4 className="font-semibold text-primary">Monthly Subscription</h4>
                         <p className="text-sm text-gray-600">
-                          Want 6 months of history? That&apos;s 6 &times; 20&euro; per developer
+                          After setup, pay 20&euro; per developer per month for ongoing analytics
                         </p>
                       </div>
                     </div>
@@ -334,32 +347,38 @@ export default function PricingPage() {
                   <h3 className="text-xl font-bold text-primary mb-4">Pricing Examples</h3>
                   <div className="space-y-3">
                     <div className="bg-white rounded-lg p-4 shadow-sm">
-                      <div className="flex justify-between items-center">
-                        <div>
-                          <p className="font-semibold text-primary">5 developers, 1 month</p>
-                          <p className="text-sm text-gray-500">Current month data</p>
-                        </div>
-                        <span className="text-xl font-bold text-accent">100&euro;</span>
+                      <p className="font-semibold text-primary mb-1">5 developers, 3 months history</p>
+                      <div className="flex justify-between items-center text-sm text-gray-500">
+                        <span>Setup (one-time)</span>
+                        <span className="font-bold text-primary">5 &times; 20&euro; &times; 3 = 300&euro;</span>
+                      </div>
+                      <div className="flex justify-between items-center text-sm text-gray-500">
+                        <span>Then monthly</span>
+                        <span className="font-bold text-accent">100&euro;/month</span>
                       </div>
                     </div>
 
                     <div className="bg-white rounded-lg p-4 shadow-sm">
-                      <div className="flex justify-between items-center">
-                        <div>
-                          <p className="font-semibold text-primary">10 developers, 3 months</p>
-                          <p className="text-sm text-gray-500">Quarterly analysis</p>
-                        </div>
-                        <span className="text-xl font-bold text-accent">600&euro;</span>
+                      <p className="font-semibold text-primary mb-1">10 developers, 6 months history</p>
+                      <div className="flex justify-between items-center text-sm text-gray-500">
+                        <span>Setup (one-time)</span>
+                        <span className="font-bold text-primary">10 &times; 20&euro; &times; 6 = 1,200&euro;</span>
+                      </div>
+                      <div className="flex justify-between items-center text-sm text-gray-500">
+                        <span>Then monthly</span>
+                        <span className="font-bold text-accent">200&euro;/month</span>
                       </div>
                     </div>
 
                     <div className="bg-white rounded-lg p-4 shadow-sm">
-                      <div className="flex justify-between items-center">
-                        <div>
-                          <p className="font-semibold text-primary">20 developers, 6 months</p>
-                          <p className="text-sm text-gray-500">Half-year deep dive</p>
-                        </div>
-                        <span className="text-xl font-bold text-accent">2,400&euro;</span>
+                      <p className="font-semibold text-primary mb-1">20 developers, 12 months history</p>
+                      <div className="flex justify-between items-center text-sm text-gray-500">
+                        <span>Setup (one-time)</span>
+                        <span className="font-bold text-primary">20 &times; 20&euro; &times; 12 = 4,800&euro;</span>
+                      </div>
+                      <div className="flex justify-between items-center text-sm text-gray-500">
+                        <span>Then monthly</span>
+                        <span className="font-bold text-accent">400&euro;/month</span>
                       </div>
                     </div>
                   </div>
@@ -380,11 +399,13 @@ export default function PricingPage() {
 
             <div className="space-y-6">
               <div className="bg-white rounded-xl p-6 shadow-sm">
-                <h3 className="font-bold text-primary mb-2">What does &quot;per developer per month&quot; mean?</h3>
+                <h3 className="font-bold text-primary mb-2">How does the setup fee work?</h3>
                 <p className="text-gray-700">
-                  You pay 20&euro; for each developer whose data you want to analyze, for each month
-                  of historical data you want to access. For example, analyzing 10 developers for the
-                  last 6 months costs 10 &times; 20&euro; &times; 6 = 1,200&euro;.
+                  During setup, you choose how many months of historical data to import. The setup fee
+                  is 20&euro; &times; number of developers &times; months of history (one-time).
+                  For example, importing 6 months of history for 10 developers costs
+                  10 &times; 20&euro; &times; 6 = 1,200&euro;. After that, you pay 20&euro; per developer
+                  per month for ongoing analytics.
                 </p>
               </div>
 

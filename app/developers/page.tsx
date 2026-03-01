@@ -285,8 +285,8 @@ export default function DevelopersPage() {
               <div className="relative">
                 <div className="rounded-2xl overflow-hidden shadow-2xl border border-gray-200">
                   <Image
-                    src="/screenshot-dev-detail.png"
-                    alt="Individual developer profile with commit history, statistics, and AI grades"
+                    src="/statistics-developers.png"
+                    alt="Individual developer profile with commit history, statistics, and AI usage analysis"
                     width={1400}
                     height={900}
                     className="w-full h-auto"
