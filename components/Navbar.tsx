@@ -5,6 +5,13 @@ import Link from 'next/link';
 import Image from 'next/image';
 import { Menu, X } from 'lucide-react';
 
+const navLinks = [
+  { href: '/developers', label: 'Developers' },
+  { href: '/product-owner', label: 'Product Owner' },
+  { href: '/coding', label: 'Coding' },
+  { href: '/pricing', label: 'Pricing' },
+];
+
 export const Navbar = () => {
   const [scrolled, setScrolled] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -37,30 +44,17 @@ export const Navbar = () => {
 
           {/* Navigation Links */}
           <nav className="hidden md:flex items-center space-x-8" aria-label="Main menu">
-            <Link
-              href="/product"
-              className={`font-medium transition-colors duration-300 ${
-                scrolled ? 'text-white hover:text-accent' : 'text-primary hover:text-secondary'
-              }`}
-            >
-              Product
-            </Link>
-            <Link
-              href="/solutions"
-              className={`font-medium transition-colors duration-300 ${
-                scrolled ? 'text-white hover:text-accent' : 'text-primary hover:text-secondary'
-              }`}
-            >
-              Solutions
-            </Link>
-            <Link
-              href="/contact"
-              className={`font-medium transition-colors duration-300 ${
-                scrolled ? 'text-white hover:text-accent' : 'text-primary hover:text-secondary'
-              }`}
-            >
-              Contact
-            </Link>
+            {navLinks.map((link) => (
+              <Link
+                key={link.href}
+                href={link.href}
+                className={`font-medium transition-colors duration-300 ${
+                  scrolled ? 'text-white hover:text-accent' : 'text-primary hover:text-secondary'
+                }`}
+              >
+                {link.label}
+              </Link>
+            ))}
 
             {/* Request Demo CTA */}
             <Link
@@ -87,33 +81,18 @@ export const Navbar = () => {
         {mobileMenuOpen && (
           <div className="md:hidden mt-4 pb-4 border-t border-gray-200">
             <div className="flex flex-col space-y-4 mt-4">
-              <Link
-                href="/product"
-                onClick={toggleMobileMenu}
-                className={`font-medium transition-colors duration-300 ${
-                  scrolled ? 'text-white hover:text-accent' : 'text-primary hover:text-secondary'
-                }`}
-              >
-                Product
-              </Link>
-              <Link
-                href="/solutions"
-                onClick={toggleMobileMenu}
-                className={`font-medium transition-colors duration-300 ${
-                  scrolled ? 'text-white hover:text-accent' : 'text-primary hover:text-secondary'
-                }`}
-              >
-                Solutions
-              </Link>
-              <Link
-                href="/contact"
-                onClick={toggleMobileMenu}
-                className={`font-medium transition-colors duration-300 ${
-                  scrolled ? 'text-white hover:text-accent' : 'text-primary hover:text-secondary'
-                }`}
-              >
-                Contact
-              </Link>
+              {navLinks.map((link) => (
+                <Link
+                  key={link.href}
+                  href={link.href}
+                  onClick={toggleMobileMenu}
+                  className={`font-medium transition-colors duration-300 ${
+                    scrolled ? 'text-white hover:text-accent' : 'text-primary hover:text-secondary'
+                  }`}
+                >
+                  {link.label}
+                </Link>
+              ))}
               <Link
                 href="/contact"
                 onClick={toggleMobileMenu}
