@@ -77,7 +77,7 @@ export default function HomePage() {
             </Link>
 
             <Link
-              href="/product"
+              href="/developers"
               className="bg-transparent border-2 border-white text-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-white hover:text-primary transition-all duration-300 flex items-center justify-center space-x-2"
             >
               <span>Explore Features</span>
@@ -300,7 +300,7 @@ export default function HomePage() {
                 </div>
 
                 <Link
-                  href="/product"
+                  href="/product-owner"
                   className="inline-flex items-center text-accent font-semibold hover:text-primary transition-colors"
                 >
                   Learn more about AI Chat
@@ -470,7 +470,7 @@ export default function HomePage() {
               </ul>
               <div className="mt-6 pt-6 border-t border-gray-100">
                 <Link
-                  href="/solutions"
+                  href="/developers"
                   className="text-accent font-semibold hover:text-primary transition-colors duration-200 inline-flex items-center"
                 >
                   Learn more
@@ -510,7 +510,7 @@ export default function HomePage() {
               </ul>
               <div className="mt-6 pt-6 border-t border-gray-100">
                 <Link
-                  href="/solutions"
+                  href="/developers"
                   className="text-secondary font-semibold hover:text-primary transition-colors duration-200 inline-flex items-center"
                 >
                   Learn more
@@ -548,7 +548,7 @@ export default function HomePage() {
               </ul>
               <div className="mt-6 pt-6 border-t border-gray-100">
                 <Link
-                  href="/solutions"
+                  href="/product-owner"
                   className="text-accent font-semibold hover:text-primary transition-colors duration-200 inline-flex items-center"
                 >
                   Learn more
@@ -586,7 +586,7 @@ export default function HomePage() {
               </ul>
               <div className="mt-6 pt-6 border-t border-gray-100">
                 <Link
-                  href="/solutions"
+                  href="/coding"
                   className="text-secondary font-semibold hover:text-primary transition-colors duration-200 inline-flex items-center"
                 >
                   Learn more
@@ -616,10 +616,10 @@ export default function HomePage() {
               <ArrowRight className="w-5 h-5" />
             </Link>
             <Link
-              href="/product"
+              href="/pricing"
               className="bg-white text-primary px-10 py-4 rounded-lg font-semibold text-lg hover:bg-gray-100 transition-all duration-300 inline-flex items-center justify-center"
             >
-              See All Features
+              See Pricing
             </Link>
           </div>
         </div>

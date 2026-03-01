@@ -16,35 +16,40 @@ export const Footer = () => {
       </div>
       <div className="container mx-auto px-6 py-12 relative z-10">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-          {/* Column 1: Our Sites */}
+          {/* Column 1: Platform */}
           <div>
-            <h3 className="text-white font-semibold text-lg mb-4">Our Sites</h3>
+            <h3 className="text-white font-semibold text-lg mb-4">Platform</h3>
             <ul className="space-y-3">
               <li>
-                <Link href="/" className="hover:text-accent transition-colors duration-200">
-                  Home
+                <Link href="/developers" className="hover:text-accent transition-colors duration-200">
+                  Developer Statistics
                 </Link>
               </li>
               <li>
-                <Link href="/product" className="hover:text-accent transition-colors duration-200">
-                  Product
+                <Link href="/product-owner" className="hover:text-accent transition-colors duration-200">
+                  Product Owner
                 </Link>
               </li>
               <li>
-                <Link href="/solutions" className="hover:text-accent transition-colors duration-200">
-                  Solutions
+                <Link href="/coding" className="hover:text-accent transition-colors duration-200">
+                  Automated Coding
+                </Link>
+              </li>
+              <li>
+                <Link href="/pricing" className="hover:text-accent transition-colors duration-200">
+                  Pricing
                 </Link>
               </li>
             </ul>
           </div>
 
-          {/* Column 2: About Us */}
+          {/* Column 2: Company */}
           <div>
-            <h3 className="text-white font-semibold text-lg mb-4">About Us</h3>
+            <h3 className="text-white font-semibold text-lg mb-4">Company</h3>
             <ul className="space-y-3">
               <li>
                 <Link href="/about" className="hover:text-accent transition-colors duration-200">
-                  Our Story
+                  About Us
                 </Link>
               </li>
               <li>
@@ -66,7 +71,7 @@ export const Footer = () => {
             <ul className="space-y-3">
               <li>
                 <Link href="/product" className="hover:text-accent transition-colors duration-200">
-                  Product
+                  Product Overview
                 </Link>
               </li>
               <li>
