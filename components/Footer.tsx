@@ -65,18 +65,28 @@ export const Footer = () => {
             </ul>
           </div>
 
-          {/* Column 3: Resources */}
+          {/* Column 3: Solutions */}
           <div>
-            <h3 className="text-white font-semibold text-lg mb-4">Resources</h3>
+            <h3 className="text-white font-semibold text-lg mb-4">Solutions</h3>
             <ul className="space-y-3">
               <li>
-                <Link href="/product" className="hover:text-accent transition-colors duration-200">
-                  Product Overview
+                <Link href="/solutions" className="hover:text-accent transition-colors duration-200">
+                  All Solutions
                 </Link>
               </li>
               <li>
-                <Link href="/solutions" className="hover:text-accent transition-colors duration-200">
-                  Solutions
+                <Link href="/solutions/cto" className="hover:text-accent transition-colors duration-200">
+                  For CTOs & Eng. Managers
+                </Link>
+              </li>
+              <li>
+                <Link href="/solutions/investors-ma" className="hover:text-accent transition-colors duration-200">
+                  For Investors & M&A
+                </Link>
+              </li>
+              <li>
+                <Link href="/product" className="hover:text-accent transition-colors duration-200">
+                  Product Overview
                 </Link>
               </li>
             </ul>

@@ -15,8 +15,16 @@ export const metadata: Metadata = {
     template: '%s | idweo',
   },
   description:
-    'Idweo Engineering Portal - Streamline your development workflow with AI-powered engineering intelligence.',
-  keywords: ['engineering', 'development', 'portal', 'idweo', 'AI engineering platform'],
+    'Get a confidential AI engineering audit in 48 hours. Detect AI tool usage, grade developer performance, and get actionable insights — with complete data privacy.',
+  keywords: [
+    'AI engineering audit',
+    'developer performance audit',
+    'engineering team assessment',
+    'technical due diligence',
+    'developer productivity tracking',
+    'AI code detection',
+    'idweo',
+  ],
   openGraph: {
     type: 'website',
     siteName: 'Idweo',

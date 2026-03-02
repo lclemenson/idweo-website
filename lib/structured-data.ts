@@ -42,3 +42,30 @@ export const generateWebSiteStructuredData = (): StructuredData => {
     url: defaultSiteUrl,
   });
 };
+
+export const generateSoftwareApplicationStructuredData = (): StructuredData => {
+  return generateStructuredData('SoftwareApplication', {
+    name: 'idweo AI Engineering Audit Platform',
+    applicationCategory: 'BusinessApplication',
+    operatingSystem: 'Web',
+    description:
+      'AI-powered engineering audit platform that grades developers, detects AI tool usage (Copilot, Cursor), and delivers confidential team performance reports in 48 hours.',
+    url: defaultSiteUrl,
+    offers: {
+      '@type': 'Offer',
+      category: 'SaaS',
+      price: '0',
+      priceCurrency: 'USD',
+      description: 'Contact for pricing',
+    },
+    featureList: [
+      'AI-powered developer performance grading (A–F)',
+      'GitHub Copilot and Cursor AI detection',
+      'Confidential engineering team audit in 48 hours',
+      'Technical due diligence for investors and M&A',
+      'Developer productivity and velocity analysis',
+      'PRD-to-production automation pipeline',
+    ],
+    screenshot: `${defaultSiteUrl}/screenshot-dev-list.png`,
+  });
+};

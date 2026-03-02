@@ -2,6 +2,7 @@ import type { Metadata } from 'next';
 import Link from 'next/link';
 import { GradeBadgeRow } from '@/components/GradeBadge';
 import { AIUsageBar } from '@/components/MetricCard';
+import { generateSoftwareApplicationStructuredData } from '@/lib/structured-data';
 import {
   TrendingUp,
   Users,
@@ -41,8 +42,13 @@ export const metadata: Metadata = {
 };
 
 export default function HomePage() {
+  const softwareAppData = generateSoftwareApplicationStructuredData();
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(softwareAppData) }}
+      />
       {/* Hero Section — AI Audit First */}
       <section className="relative min-h-[650px] flex items-center justify-center overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-br from-primary via-primary/95 to-secondary z-0">
@@ -63,9 +69,9 @@ export default function HomePage() {
           </div>
 
           <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold text-white mb-6 leading-tight">
-            Know Your Team&apos;s
+            AI Engineering Audit:
             <br />
-            <span className="text-accent">True Performance</span>
+            <span className="text-accent">Know Your Team&apos;s True Performance</span>
           </h1>
 
           <p className="text-xl md:text-2xl text-gray-200 mb-10 max-w-3xl mx-auto leading-relaxed">
@@ -518,10 +524,10 @@ export default function HomePage() {
               </ul>
               <div className="mt-6 pt-6 border-t border-gray-100">
                 <Link
-                  href="/developers"
+                  href="/solutions"
                   className="text-accent font-semibold hover:text-primary transition-colors duration-200 inline-flex items-center"
                 >
-                  Learn more
+                  Measure Engineering ROI
                   <ArrowRight className="w-4 h-4 ml-2" />
                 </Link>
               </div>
@@ -556,10 +562,10 @@ export default function HomePage() {
               </ul>
               <div className="mt-6 pt-6 border-t border-gray-100">
                 <Link
-                  href="/developers"
+                  href="/solutions/cto"
                   className="text-secondary font-semibold hover:text-primary transition-colors duration-200 inline-flex items-center"
                 >
-                  Learn more
+                  View Developer Performance Metrics
                   <ArrowRight className="w-4 h-4 ml-2" />
                 </Link>
               </div>
@@ -592,10 +598,10 @@ export default function HomePage() {
               </ul>
               <div className="mt-6 pt-6 border-t border-gray-100">
                 <Link
-                  href="/contact"
+                  href="/solutions/investors-ma"
                   className="text-accent font-semibold hover:text-primary transition-colors duration-200 inline-flex items-center"
                 >
-                  Learn more
+                  Explore Technical Due Diligence
                   <ArrowRight className="w-4 h-4 ml-2" />
                 </Link>
               </div>
@@ -631,7 +637,7 @@ export default function HomePage() {
                   href="/product-owner"
                   className="text-secondary font-semibold hover:text-primary transition-colors duration-200 inline-flex items-center"
                 >
-                  Learn more
+                  Optimize Sprint Delivery Velocity
                   <ArrowRight className="w-4 h-4 ml-2" />
                 </Link>
               </div>
