@@ -43,7 +43,7 @@
     "stepsLabel": "Simple & Fast",
     "stepsTitle1": "Your AI Audit in",
     "stepsTitle2": "3 Simple Steps",
-    "stepsDescription": "No complex onboarding. No access to your codebase. Just connect your GitHub and receive a comprehensive team audit — confidentially and in record time.",
+    "stepsDescription": "No complex onboarding. Just connect your GitHub and receive a comprehensive team audit — confidentially and in record time.",
     "step1Title": "Connect GitHub",
     "step1Description": "Secure read-only access to your repositories. We never touch your code — only metadata and commit history.",
     "step1Tag": "Read-only access",
