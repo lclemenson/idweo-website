@@ -31,7 +31,7 @@
       "description": "Audit IA confidentiel de votre équipe d'ingénierie en 48 heures. Détectez l'utilisation d'outils IA, évaluez la performance des développeurs et obtenez des insights actionnables — en toute confidentialité."
     },
     "heroBadge": "Audit IA confidentiel",
-    "heroTitle1": "Audit d'ingénierie par IA :",
+    "heroTitle1": "Audit des équipes de développeurs par IA :",
     "heroTitle2": "Connaissez la vraie performance de votre équipe",
     "heroDescription": "Obtenez un audit IA complet et confidentiel de votre équipe d'ingénierie en moins de 48 heures. Détectez l'utilisation d'outils IA, évaluez chaque développeur et identifiez les inefficacités cachées — sans aucune perturbation et en toute confidentialité.",
     "startYourAudit": "Lancez votre audit",
@@ -153,7 +153,7 @@
   },
   "pricing": {
     "meta": {
-      "title": "Tarifs - Audit d'ingénierie par IA & Analytics développeurs | idweo",
+      "title": "Tarifs - Audit des équipes de développeurs par IA & Analytics développeurs | idweo",
       "description": "Audits de due diligence d'ingénierie ponctuels à partir de 2 500 $ ou monitoring continu des développeurs à 79 $/dev/mois. NDA mutuel, accès en lecture seule, livraison en 48h."
     },
     "heroBadge": "Tarification simple et transparente",
@@ -502,7 +502,7 @@
     "traditional4": "Facilement manipulable et influencé politiquement",
     "traditional5": "Aucune visibilité sur la dépendance aux outils IA",
     "traditional6": "Aucune donnée sur la production réelle de code",
-    "idweoTitle": "Audit d'ingénierie IA idweo",
+    "idweoTitle": "Audit des équipes de développeurs par IA idweo",
     "idweo1": "Résultats livrés en 48 heures",
     "idweo2": "Notes objectives basées sur les données issues de l'historique des commits",
     "idweo3": "Totalement silencieux — l'équipe ne sait jamais",
@@ -512,7 +512,7 @@
     "confidentialityTitle1": "Vos développeurs ne savent jamais.",
     "confidentialityTitle2": "Vous, toujours.",
     "confidentialityDesc": "L'audit se déroule silencieusement à partir de l'historique des commits uniquement. Pas de sondages, pas d'entretiens, pas de notifications. Chaque engagement commence par un NDA mutuel.",
-    "startEngAudit": "Lancez votre audit d'ingénierie",
+    "startEngAudit": "Lancez votre audit des équipes de développeurs",
     "viewPricing": "Voir les tarifs"
   },
   "solutionsInvestors": {
