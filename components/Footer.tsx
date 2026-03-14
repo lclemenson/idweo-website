@@ -1,10 +1,14 @@
 import Link from 'next/link';
-import { Mail, Phone, MapPin, Linkedin, Twitter, Github } from 'lucide-react';
+import { Mail, MapPin } from 'lucide-react';
 
-export const Footer = () => {
+interface FooterProps {
+  lang: string;
+  dict: Record<string, any>;
+}
+
+export const Footer = ({ lang, dict }: FooterProps) => {
   return (
     <footer className="bg-gradient-to-br from-primary via-primary/95 to-secondary text-gray-300 mt-auto relative overflow-hidden">
-      {/* Subtle pattern overlay */}
       <div className="absolute inset-0 opacity-5">
         <div
           className="absolute inset-0"
@@ -16,85 +20,81 @@ export const Footer = () => {
       </div>
       <div className="container mx-auto px-6 py-12 relative z-10">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-          {/* Column 1: Platform */}
           <div>
-            <h3 className="text-white font-semibold text-lg mb-4">Platform</h3>
+            <h3 className="text-white font-semibold text-lg mb-4">{dict.footer.platform}</h3>
             <ul className="space-y-3">
               <li>
-                <Link href="/developers" className="hover:text-accent transition-colors duration-200">
-                  Developer Statistics
+                <Link href={`/${lang}/developers`} className="hover:text-accent transition-colors duration-200">
+                  {dict.footer.developerStatistics}
                 </Link>
               </li>
               <li>
-                <Link href="/product-owner" className="hover:text-accent transition-colors duration-200">
-                  Product Owner
+                <Link href={`/${lang}/product-owner`} className="hover:text-accent transition-colors duration-200">
+                  {dict.footer.productOwner}
                 </Link>
               </li>
               <li>
-                <Link href="/coding" className="hover:text-accent transition-colors duration-200">
-                  Automated Coding
+                <Link href={`/${lang}/coding`} className="hover:text-accent transition-colors duration-200">
+                  {dict.footer.automatedCoding}
                 </Link>
               </li>
               <li>
-                <Link href="/pricing" className="hover:text-accent transition-colors duration-200">
-                  Pricing
+                <Link href={`/${lang}/pricing`} className="hover:text-accent transition-colors duration-200">
+                  {dict.footer.pricing}
                 </Link>
               </li>
             </ul>
           </div>
 
-          {/* Column 2: Company */}
           <div>
-            <h3 className="text-white font-semibold text-lg mb-4">Company</h3>
+            <h3 className="text-white font-semibold text-lg mb-4">{dict.footer.company}</h3>
             <ul className="space-y-3">
               <li>
-                <Link href="/about" className="hover:text-accent transition-colors duration-200">
-                  About Us
+                <Link href={`/${lang}/about`} className="hover:text-accent transition-colors duration-200">
+                  {dict.footer.aboutUs}
                 </Link>
               </li>
               <li>
-                <Link href="/contact" className="hover:text-accent transition-colors duration-200">
-                  Contact
+                <Link href={`/${lang}/contact`} className="hover:text-accent transition-colors duration-200">
+                  {dict.footer.contact}
                 </Link>
               </li>
               <li>
-                <Link href="/contact" className="hover:text-accent transition-colors duration-200">
-                  Request Demo
+                <Link href={`/${lang}/contact`} className="hover:text-accent transition-colors duration-200">
+                  {dict.footer.requestDemo}
                 </Link>
               </li>
             </ul>
           </div>
 
-          {/* Column 3: Solutions */}
           <div>
-            <h3 className="text-white font-semibold text-lg mb-4">Solutions</h3>
+            <h3 className="text-white font-semibold text-lg mb-4">{dict.footer.solutions}</h3>
             <ul className="space-y-3">
               <li>
-                <Link href="/solutions" className="hover:text-accent transition-colors duration-200">
-                  All Solutions
+                <Link href={`/${lang}/solutions`} className="hover:text-accent transition-colors duration-200">
+                  {dict.footer.allSolutions}
                 </Link>
               </li>
               <li>
-                <Link href="/solutions/cto" className="hover:text-accent transition-colors duration-200">
-                  For CTOs & Eng. Managers
+                <Link href={`/${lang}/solutions/cto`} className="hover:text-accent transition-colors duration-200">
+                  {dict.footer.forCtos}
                 </Link>
               </li>
               <li>
-                <Link href="/solutions/investors-ma" className="hover:text-accent transition-colors duration-200">
-                  For Investors & M&A
+                <Link href={`/${lang}/solutions/investors-ma`} className="hover:text-accent transition-colors duration-200">
+                  {dict.footer.forInvestors}
                 </Link>
               </li>
               <li>
-                <Link href="/product" className="hover:text-accent transition-colors duration-200">
-                  Product Overview
+                <Link href={`/${lang}/product`} className="hover:text-accent transition-colors duration-200">
+                  {dict.footer.productOverview}
                 </Link>
               </li>
             </ul>
           </div>
 
-          {/* Column 4: Contacts */}
           <div>
-            <h3 className="text-white font-semibold text-lg mb-4">Contact</h3>
+            <h3 className="text-white font-semibold text-lg mb-4">{dict.footer.contactTitle}</h3>
             <ul className="space-y-3">
               <li className="flex items-start space-x-3">
                 <Mail className="w-5 h-5 text-accent mt-0.5 flex-shrink-0" />
@@ -105,50 +105,17 @@ export const Footer = () => {
                   contact@idweo.com
                 </a>
               </li>
-             
               <li className="flex items-start space-x-3">
                 <MapPin className="w-5 h-5 text-accent mt-0.5 flex-shrink-0" />
-                <span>London, UK</span>
+                <span>{dict.footer.location}</span>
               </li>
             </ul>
-
-            {/* Social Media Links
-            <div className="flex space-x-4 mt-6">
-              <a
-                href="https://linkedin.com/company/idweo"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="hover:text-accent transition-colors duration-200"
-                aria-label="Follow Idweo on LinkedIn"
-              >
-                <Linkedin className="w-5 h-5" />
-              </a>
-              <a
-                href="https://twitter.com/idweo"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="hover:text-accent transition-colors duration-200"
-                aria-label="Follow Idweo on Twitter"
-              >
-                <Twitter className="w-5 h-5" />
-              </a>
-              <a
-                href="https://github.com/idweo"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="hover:text-accent transition-colors duration-200"
-                aria-label="Idweo on GitHub"
-              >
-                <Github className="w-5 h-5" />
-              </a>
-            </div> */}
           </div>
         </div>
 
-        {/* Bottom Bar */}
         <div className="border-t border-white/10 mt-8 pt-8 text-center">
           <p className="text-sm text-gray-300">
-            &copy; {new Date().getFullYear()} idweo. All rights reserved.
+            &copy; {new Date().getFullYear()} idweo. {dict.footer.copyright}
           </p>
         </div>
       </div>

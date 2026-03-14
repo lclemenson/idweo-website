@@ -1,5 +1,6 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
+import { i18n, getDictionary, type Locale } from '@/lib/i18n';
 import {
   Check,
   ArrowRight,
@@ -8,28 +9,29 @@ import {
   BarChart3,
   Zap,
   Lock,
-  Users,
   Phone,
   Gift,
-  Sparkles,
-  Code2,
-  MessageSquare,
 } from 'lucide-react';
 
-export const metadata: Metadata = {
-  title: 'Pricing - AI Engineering Audit & Developer Analytics | idweo',
-  description:
-    'One-off engineering due diligence audits from $2,500 or continuous developer monitoring at $79/dev/month. Mutual NDA, read-only access, 48h delivery.',
-  keywords: [
-    'engineering due diligence pricing',
-    'developer analytics pricing',
-    'AI audit cost',
-    'engineering team audit',
-    'developer monitoring subscription',
-  ],
-};
+export function generateStaticParams() {
+  return i18n.locales.map((lang) => ({ lang }));
+}
 
-export default function PricingPage() {
+export async function generateMetadata({ params }: { params: Promise<{ lang: string }> }): Promise<Metadata> {
+  const { lang } = await params;
+  const dict = await getDictionary(lang as Locale);
+  const t = dict.pricing;
+  return {
+    title: t.meta.title,
+    description: t.meta.description,
+  };
+}
+
+export default async function PricingPage({ params }: { params: Promise<{ lang: string }> }) {
+  const { lang } = await params;
+  const dict = await getDictionary(lang as Locale);
+  const t = dict.pricing;
+
   return (
     <>
       {/* Hero Section */}
@@ -46,16 +48,15 @@ export default function PricingPage() {
 
         <div className="relative container mx-auto px-6 text-center">
           <div className="inline-block bg-accent/10 backdrop-blur-sm px-4 py-2 rounded-full mb-6">
-            <span className="text-accent font-semibold">Simple, Transparent Pricing</span>
+            <span className="text-accent font-semibold">{t.heroBadge}</span>
           </div>
 
           <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
-            The Report. The Insights. The Clarity.
+            {t.heroTitle}
           </h1>
 
           <p className="text-xl text-gray-200 max-w-3xl mx-auto leading-relaxed">
-            Whether you need a one-time snapshot for due diligence or ongoing monitoring
-            to protect your payroll ROI &mdash; we have a plan for you.
+            {t.heroDescription}
           </p>
         </div>
       </section>
@@ -66,15 +67,15 @@ export default function PricingPage() {
           <div className="flex flex-col sm:flex-row justify-center items-center gap-6 sm:gap-12 text-sm text-gray-600">
             <div className="flex items-center space-x-2">
               <Lock className="w-4 h-4 text-accent" />
-              <span>Mutual NDA included</span>
+              <span>{t.trustNda}</span>
             </div>
             <div className="flex items-center space-x-2">
               <Shield className="w-4 h-4 text-accent" />
-              <span>Read-only access &mdash; no code modification</span>
+              <span>{t.trustReadOnly}</span>
             </div>
             <div className="flex items-center space-x-2">
               <Zap className="w-4 h-4 text-accent" />
-              <span>Report delivered in 48 hours</span>
+              <span>{t.trustDelivery}</span>
             </div>
           </div>
         </div>
@@ -93,51 +94,51 @@ export default function PricingPage() {
                     <Gift className="w-7 h-7 text-green-600" />
                   </div>
                   <div className="text-xs font-semibold text-green-600 uppercase tracking-wide mb-2">
-                    Get Started
+                    {t.pilotLabel}
                   </div>
-                  <h3 className="text-2xl font-bold text-primary mb-2">Pilot Audit</h3>
+                  <h3 className="text-2xl font-bold text-primary mb-2">{t.pilotTitle}</h3>
                   <p className="text-gray-600 mb-6">
-                    See the value before you commit. Free audit of 1&ndash;3 developers or one repository.
+                    {t.pilotDescription}
                   </p>
 
                   <div className="mb-8">
                     <div className="flex items-baseline">
-                      <span className="text-5xl font-bold text-green-600">Free</span>
+                      <span className="text-5xl font-bold text-green-600">{t.pilotPrice}</span>
                     </div>
                     <p className="text-sm text-gray-500 mt-2">
-                      Limited to first 10 qualified companies
+                      {t.pilotLimit}
                     </p>
                   </div>
 
                   <div className="flex-1" />
 
                   <Link
-                    href="/contact"
+                    href={`/${lang}/contact`}
                     className="block w-full bg-green-600 text-white text-center px-6 py-3 rounded-lg font-semibold hover:bg-green-700 transition-all duration-300 shadow-lg hover:shadow-xl mb-8"
                   >
-                    Request Your Free Pilot
+                    {t.pilotCta}
                   </Link>
 
                   <div className="space-y-3">
                     <div className="flex items-start space-x-3">
                       <Check className="w-5 h-5 text-green-600 mt-0.5 flex-shrink-0" />
-                      <span className="text-sm text-gray-700">Audit of 1&ndash;3 developers</span>
+                      <span className="text-sm text-gray-700">{t.pilotFeature1}</span>
                     </div>
                     <div className="flex items-start space-x-3">
                       <Check className="w-5 h-5 text-green-600 mt-0.5 flex-shrink-0" />
-                      <span className="text-sm text-gray-700">AI performance grades (A&ndash;F)</span>
+                      <span className="text-sm text-gray-700">{t.pilotFeature2}</span>
                     </div>
                     <div className="flex items-start space-x-3">
                       <Check className="w-5 h-5 text-green-600 mt-0.5 flex-shrink-0" />
-                      <span className="text-sm text-gray-700">AI code detection (Copilot, Cursor)</span>
+                      <span className="text-sm text-gray-700">{t.pilotFeature3}</span>
                     </div>
                     <div className="flex items-start space-x-3">
                       <Check className="w-5 h-5 text-green-600 mt-0.5 flex-shrink-0" />
-                      <span className="text-sm text-gray-700">Full PDF report within 48h</span>
+                      <span className="text-sm text-gray-700">{t.pilotFeature4}</span>
                     </div>
                     <div className="flex items-start space-x-3">
                       <Check className="w-5 h-5 text-green-600 mt-0.5 flex-shrink-0" />
-                      <span className="text-sm text-gray-700">Mutual NDA &amp; read-only access</span>
+                      <span className="text-sm text-gray-700">{t.pilotFeature5}</span>
                     </div>
                   </div>
                 </div>
@@ -146,81 +147,81 @@ export default function PricingPage() {
               {/* One-Off Audit — Most Popular */}
               <div className="bg-white rounded-2xl shadow-xl border-2 border-accent overflow-hidden relative flex flex-col">
                 <div className="absolute top-0 left-0 right-0 bg-accent text-white text-center py-2 text-sm font-semibold">
-                  Most Popular
+                  {t.popularLabel}
                 </div>
                 <div className="p-8 pt-14 flex flex-col flex-1">
                   <div className="w-14 h-14 bg-accent/10 rounded-xl flex items-center justify-center mb-6">
                     <FileSearch className="w-7 h-7 text-accent" />
                   </div>
                   <div className="text-xs font-semibold text-accent uppercase tracking-wide mb-2">
-                    Due Diligence &amp; M&amp;A
+                    {t.auditLabel}
                   </div>
-                  <h3 className="text-2xl font-bold text-primary mb-2">One-Off Audit</h3>
+                  <h3 className="text-2xl font-bold text-primary mb-2">{t.auditTitle}</h3>
                   <p className="text-gray-600 mb-6">
-                    A complete engineering snapshot delivered in 48 hours. Ideal for investors, PE firms, and acquisitions.
+                    {t.auditDescription}
                   </p>
 
                   <div className="mb-6">
                     <div className="flex items-baseline">
-                      <span className="text-5xl font-bold text-primary">$2,500</span>
+                      <span className="text-5xl font-bold text-primary">{t.auditPrice}</span>
                     </div>
                     <p className="text-sm text-gray-500 mt-2">
-                      Flat fee &bull; 1&ndash;10 developers
+                      {t.auditPriceNote}
                     </p>
                   </div>
 
                   <div className="space-y-2 mb-8">
                     <div className="flex justify-between items-center bg-gray-50 rounded-lg px-4 py-3">
-                      <span className="text-sm font-medium text-gray-700">1&ndash;10 developers</span>
-                      <span className="text-sm font-bold text-primary">$2,500</span>
+                      <span className="text-sm font-medium text-gray-700">{t.auditTier1}</span>
+                      <span className="text-sm font-bold text-primary">{t.auditTier1Price}</span>
                     </div>
                     <div className="flex justify-between items-center bg-gray-50 rounded-lg px-4 py-3">
-                      <span className="text-sm font-medium text-gray-700">11&ndash;50 developers</span>
-                      <span className="text-sm font-bold text-primary">$5,000</span>
+                      <span className="text-sm font-medium text-gray-700">{t.auditTier2}</span>
+                      <span className="text-sm font-bold text-primary">{t.auditTier2Price}</span>
                     </div>
                     <div className="flex justify-between items-center bg-gray-50 rounded-lg px-4 py-3">
-                      <span className="text-sm font-medium text-gray-700">50+ developers</span>
-                      <span className="text-sm font-bold text-secondary">Talk to Sales</span>
+                      <span className="text-sm font-medium text-gray-700">{t.auditTier3}</span>
+                      <span className="text-sm font-bold text-secondary">{t.auditTier3Price}</span>
                     </div>
                   </div>
 
                   <div className="flex-1" />
 
                   <Link
-                    href="/contact"
+                    href={`/${lang}/contact`}
                     className="block w-full bg-accent text-white text-center px-6 py-3 rounded-lg font-semibold hover:bg-opacity-90 transition-all duration-300 shadow-lg hover:shadow-xl mb-8"
                   >
-                    Order Your Audit
+                    {t.auditCta}
                   </Link>
 
                   <div className="space-y-3">
                     <div className="flex items-start space-x-3">
                       <Check className="w-5 h-5 text-accent mt-0.5 flex-shrink-0" />
-                      <span className="text-sm text-gray-700">Full team performance report</span>
+                      <span className="text-sm text-gray-700">{t.auditFeature1}</span>
                     </div>
                     <div className="flex items-start space-x-3">
                       <Check className="w-5 h-5 text-accent mt-0.5 flex-shrink-0" />
-                      <span className="text-sm text-gray-700">AI performance grades (A&ndash;F) per developer</span>
+                      <span className="text-sm text-gray-700">{t.auditFeature2}</span>
                     </div>
                     <div className="flex items-start space-x-3">
                       <Check className="w-5 h-5 text-accent mt-0.5 flex-shrink-0" />
-                      <span className="text-sm text-gray-700">Pareto analysis &amp; efficiency ranking</span>
+                      <span className="text-sm text-gray-700">{t.auditFeature3}</span>
                     </div>
                     <div className="flex items-start space-x-3">
                       <Check className="w-5 h-5 text-accent mt-0.5 flex-shrink-0" />
-                      <span className="text-sm text-gray-700">AI code detection (Copilot, Cursor, ChatGPT)</span>
+                      <span className="text-sm text-gray-700">{t.auditFeature4}</span>
                     </div>
                     <div className="flex items-start space-x-3">
                       <Check className="w-5 h-5 text-accent mt-0.5 flex-shrink-0" />
-                      <span className="text-sm text-gray-700">Burnout &amp; risk indicators</span>
+                      <span className="text-sm text-gray-700">{t.auditFeature5}</span>
                     </div>
                     <div className="flex items-start space-x-3">
                       <Check className="w-5 h-5 text-accent mt-0.5 flex-shrink-0" />
-                      <span className="text-sm text-gray-700">Mutual NDA &amp; read-only access</span>
+                      <span className="text-sm text-gray-700">{t.auditFeature6}</span>
                     </div>
                     <div className="flex items-start space-x-3">
                       <Check className="w-5 h-5 text-accent mt-0.5 flex-shrink-0" />
-                      <span className="text-sm text-gray-700">Delivered within 48 hours</span>
+                      <span className="text-sm text-gray-700">{t.auditFeature7}</span>
                     </div>
                   </div>
                 </div>
@@ -233,70 +234,70 @@ export default function PricingPage() {
                     <BarChart3 className="w-7 h-7 text-secondary" />
                   </div>
                   <div className="text-xs font-semibold text-secondary uppercase tracking-wide mb-2">
-                    For Founders, CEOs &amp; CTOs
+                    {t.monitoringLabel}
                   </div>
-                  <h3 className="text-2xl font-bold text-primary mb-2">Continuous Monitoring</h3>
+                  <h3 className="text-2xl font-bold text-primary mb-2">{t.monitoringTitle}</h3>
                   <p className="text-gray-600 mb-6">
-                    A live dashboard tracking sprint velocity, AI usage trends, and burnout risks &mdash; week over week.
+                    {t.monitoringDescription}
                   </p>
 
                   <div className="mb-6">
                     <div className="flex items-baseline">
-                      <span className="text-5xl font-bold text-primary">$79</span>
+                      <span className="text-5xl font-bold text-primary">{t.monitoringPrice}</span>
                     </div>
                     <p className="text-sm text-gray-500 mt-2">
-                      per developer / month &bull; 12-month engagement
+                      {t.monitoringPriceNote}
                     </p>
                   </div>
 
                   <div className="bg-secondary/5 border border-secondary/20 rounded-lg p-4 mb-8">
                     <p className="text-sm text-gray-700">
-                      <span className="font-semibold text-secondary">Example:</span> 10 developers at $79/dev =
-                      <span className="font-bold text-primary"> $790/month</span>
+                      <span className="font-semibold text-secondary">{t.monitoringExample}</span> {t.monitoringExampleText}
+                      <span className="font-bold text-primary"> {t.monitoringExamplePrice}</span>
                     </p>
                   </div>
 
                   <div className="flex-1" />
 
                   <Link
-                    href="/contact"
+                    href={`/${lang}/contact`}
                     className="block w-full bg-secondary text-white text-center px-6 py-3 rounded-lg font-semibold hover:bg-opacity-90 transition-all duration-300 shadow-lg hover:shadow-xl mb-8"
                   >
-                    Start Monitoring Your Team
+                    {t.monitoringCta}
                   </Link>
 
                   <div className="space-y-3">
                     <div className="flex items-start space-x-3">
                       <Check className="w-5 h-5 text-secondary mt-0.5 flex-shrink-0" />
-                      <span className="text-sm text-gray-700">Live analytics dashboard</span>
+                      <span className="text-sm text-gray-700">{t.monitoringFeature1}</span>
                     </div>
                     <div className="flex items-start space-x-3">
                       <Check className="w-5 h-5 text-secondary mt-0.5 flex-shrink-0" />
-                      <span className="text-sm text-gray-700">Weekly sprint velocity tracking</span>
+                      <span className="text-sm text-gray-700">{t.monitoringFeature2}</span>
                     </div>
                     <div className="flex items-start space-x-3">
                       <Check className="w-5 h-5 text-secondary mt-0.5 flex-shrink-0" />
-                      <span className="text-sm text-gray-700">AI usage trends over time</span>
+                      <span className="text-sm text-gray-700">{t.monitoringFeature3}</span>
                     </div>
                     <div className="flex items-start space-x-3">
                       <Check className="w-5 h-5 text-secondary mt-0.5 flex-shrink-0" />
-                      <span className="text-sm text-gray-700">Burnout risk alerts</span>
+                      <span className="text-sm text-gray-700">{t.monitoringFeature4}</span>
                     </div>
                     <div className="flex items-start space-x-3">
                       <Check className="w-5 h-5 text-secondary mt-0.5 flex-shrink-0" />
-                      <span className="text-sm text-gray-700">Individual developer profiles</span>
+                      <span className="text-sm text-gray-700">{t.monitoringFeature5}</span>
                     </div>
                     <div className="flex items-start space-x-3">
                       <Check className="w-5 h-5 text-secondary mt-0.5 flex-shrink-0" />
-                      <span className="text-sm text-gray-700">Monthly AI team analysis reports</span>
+                      <span className="text-sm text-gray-700">{t.monitoringFeature6}</span>
                     </div>
                     <div className="flex items-start space-x-3">
                       <Check className="w-5 h-5 text-secondary mt-0.5 flex-shrink-0" />
-                      <span className="text-sm text-gray-700">GitHub integration</span>
+                      <span className="text-sm text-gray-700">{t.monitoringFeature7}</span>
                     </div>
                     <div className="flex items-start space-x-3">
                       <Check className="w-5 h-5 text-secondary mt-0.5 flex-shrink-0" />
-                      <span className="text-sm text-gray-700">Mutual NDA &amp; read-only access</span>
+                      <span className="text-sm text-gray-700">{t.monitoringFeature8}</span>
                     </div>
                   </div>
                 </div>
@@ -312,10 +313,10 @@ export default function PricingPage() {
           <div className="max-w-4xl mx-auto">
             <div className="text-center mb-12">
               <h2 className="text-4xl font-bold text-primary mb-4">
-                Your Code Stays Safe
+                {t.securityTitle}
               </h2>
               <p className="text-xl text-secondary">
-                Security is not an afterthought &mdash; it&apos;s built into every engagement
+                {t.securitySubtitle}
               </p>
             </div>
 
@@ -324,27 +325,27 @@ export default function PricingPage() {
                 <div className="w-16 h-16 bg-accent/10 rounded-2xl flex items-center justify-center mx-auto mb-4">
                   <Lock className="w-8 h-8 text-accent" />
                 </div>
-                <h3 className="font-bold text-primary mb-2">Mutual NDA</h3>
+                <h3 className="font-bold text-primary mb-2">{t.securityNdaTitle}</h3>
                 <p className="text-sm text-gray-600">
-                  Every engagement starts with a signed mutual NDA. Your data is legally protected before we access anything.
+                  {t.securityNdaDesc}
                 </p>
               </div>
               <div className="text-center">
                 <div className="w-16 h-16 bg-accent/10 rounded-2xl flex items-center justify-center mx-auto mb-4">
                   <Shield className="w-8 h-8 text-accent" />
                 </div>
-                <h3 className="font-bold text-primary mb-2">Read-Only Access</h3>
+                <h3 className="font-bold text-primary mb-2">{t.securityReadOnlyTitle}</h3>
                 <p className="text-sm text-gray-600">
-                  We never modify your code. Our analysis uses strictly read-only GitHub permissions &mdash; zero risk to your repositories.
+                  {t.securityReadOnlyDesc}
                 </p>
               </div>
               <div className="text-center">
                 <div className="w-16 h-16 bg-accent/10 rounded-2xl flex items-center justify-center mx-auto mb-4">
                   <Zap className="w-8 h-8 text-accent" />
                 </div>
-                <h3 className="font-bold text-primary mb-2">48-Hour Delivery</h3>
+                <h3 className="font-bold text-primary mb-2">{t.securityDeliveryTitle}</h3>
                 <p className="text-sm text-gray-600">
-                  For one-off audits, your full report is delivered within 48 hours. No waiting weeks for critical decisions.
+                  {t.securityDeliveryDesc}
                 </p>
               </div>
             </div>
@@ -357,62 +358,38 @@ export default function PricingPage() {
         <div className="container mx-auto px-6">
           <div className="max-w-3xl mx-auto">
             <div className="text-center mb-12">
-              <h2 className="text-4xl font-bold text-primary mb-4">Frequently Asked Questions</h2>
+              <h2 className="text-4xl font-bold text-primary mb-4">{t.faqTitle}</h2>
             </div>
 
             <div className="space-y-6">
               <div className="bg-white rounded-xl p-6 shadow-sm">
-                <h3 className="font-bold text-primary mb-2">Who is the One-Off Audit for?</h3>
-                <p className="text-gray-700">
-                  It&apos;s designed for investors, PE firms, and acquirers running technical due diligence.
-                  You get a complete engineering snapshot &mdash; team grades, AI usage, efficiency
-                  ranking &mdash; delivered in 48 hours as a flat-fee engagement.
-                </p>
+                <h3 className="font-bold text-primary mb-2">{t.faq1Question}</h3>
+                <p className="text-gray-700">{t.faq1Answer}</p>
               </div>
 
               <div className="bg-white rounded-xl p-6 shadow-sm">
-                <h3 className="font-bold text-primary mb-2">Who is Continuous Monitoring for?</h3>
-                <p className="text-gray-700">
-                  Founders, CEOs, and CTOs who want ongoing visibility into their engineering team.
-                  Track sprint velocity, AI adoption, and burnout risk week over week with a live dashboard &mdash;
-                  similar in cost to a premium developer tool license.
-                </p>
+                <h3 className="font-bold text-primary mb-2">{t.faq2Question}</h3>
+                <p className="text-gray-700">{t.faq2Answer}</p>
               </div>
 
               <div className="bg-white rounded-xl p-6 shadow-sm">
-                <h3 className="font-bold text-primary mb-2">What&apos;s included in the free Pilot?</h3>
-                <p className="text-gray-700">
-                  We audit 1&ndash;3 developers (or one specific repository) for free. You receive the same
-                  quality report as paid engagements. It&apos;s the fastest way to see the value before
-                  committing to a full team audit.
-                </p>
+                <h3 className="font-bold text-primary mb-2">{t.faq3Question}</h3>
+                <p className="text-gray-700">{t.faq3Answer}</p>
               </div>
 
               <div className="bg-white rounded-xl p-6 shadow-sm">
-                <h3 className="font-bold text-primary mb-2">How is my data protected?</h3>
-                <p className="text-gray-700">
-                  Every engagement begins with a signed mutual NDA. We use strictly read-only GitHub
-                  access &mdash; we never modify your code or repositories. Your data is processed
-                  securely and never shared with third parties.
-                </p>
+                <h3 className="font-bold text-primary mb-2">{t.faq4Question}</h3>
+                <p className="text-gray-700">{t.faq4Answer}</p>
               </div>
 
               <div className="bg-white rounded-xl p-6 shadow-sm">
-                <h3 className="font-bold text-primary mb-2">Why is 50+ developer pricing custom?</h3>
-                <p className="text-gray-700">
-                  Larger organizations have unique security requirements and more complex team
-                  structures. A sales call lets us scope the engagement properly and provide
-                  the best value for your specific situation.
-                </p>
+                <h3 className="font-bold text-primary mb-2">{t.faq5Question}</h3>
+                <p className="text-gray-700">{t.faq5Answer}</p>
               </div>
 
               <div className="bg-white rounded-xl p-6 shadow-sm">
-                <h3 className="font-bold text-primary mb-2">What integrations are supported?</h3>
-                <p className="text-gray-700">
-                  All plans include GitHub integration for repository analysis. Continuous Monitoring
-                  also supports Jira for sprint tracking. We&apos;re adding more integrations based
-                  on customer needs.
-                </p>
+                <h3 className="font-bold text-primary mb-2">{t.faq6Question}</h3>
+                <p className="text-gray-700">{t.faq6Answer}</p>
               </div>
             </div>
           </div>
@@ -423,25 +400,25 @@ export default function PricingPage() {
       <section className="py-20 bg-gradient-to-br from-primary to-secondary">
         <div className="container mx-auto px-6 text-center">
           <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-            Ready to See Your Team&apos;s True Performance?
+            {t.ctaTitle}
           </h2>
           <p className="text-xl text-gray-200 mb-10 max-w-2xl mx-auto">
-            Start with a free pilot audit or order a full engineering report today
+            {t.ctaDescription}
           </p>
           <div className="flex flex-col sm:flex-row justify-center gap-4">
             <Link
-              href="/contact"
+              href={`/${lang}/contact`}
               className="bg-accent text-white px-10 py-4 rounded-lg font-semibold text-lg hover:bg-opacity-90 transition-all duration-300 shadow-xl hover:shadow-2xl hover:scale-105 inline-flex items-center justify-center space-x-2"
             >
-              <span>Get Your Free Pilot</span>
+              <span>{t.ctaFreePilot}</span>
               <ArrowRight className="w-5 h-5" />
             </Link>
             <Link
-              href="/contact"
+              href={`/${lang}/contact`}
               className="bg-white text-primary px-10 py-4 rounded-lg font-semibold text-lg hover:bg-gray-100 transition-all duration-300 inline-flex items-center justify-center space-x-2"
             >
               <Phone className="w-5 h-5" />
-              <span>Talk to Sales</span>
+              <span>{t.ctaTalkToSales}</span>
             </Link>
           </div>
         </div>
