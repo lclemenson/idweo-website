@@ -104,7 +104,7 @@ export default async function AutomatedCodingPage({ params }: { params: Promise<
             <p className="text-xl text-secondary max-w-2xl mx-auto">{t.howItWorksSubtitle}</p>
           </div>
           <div className="max-w-5xl mx-auto">
-            <TabShowcase tabs={workflowTabs} />
+            <WorkflowTabShowcase tabs={workflowTabs} />
           </div>
         </div>
       </section>
